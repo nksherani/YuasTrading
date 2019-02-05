@@ -1,0 +1,70 @@
+﻿<div id="compare-flyout" style="position:fixed;bottom:0px;right:10px;z-index:500" class="hidden-print">
+    <h2 id="toggle-comparelist" style="cursor:pointer;float:right;border-radius:5px 5px 0 0;"><span class="glyphicon glyphicon-stats"></span> Compare List (<span id="compare-list-count">0</span>/4) <span class="glyphicon glyphicon-chevron-up"></span></h2>
+    <div style="display:inline-block;margin-right:2px;float:right">
+        @*<script src="https://yuasatrading.com/LiveChat/CuteSoft_Client/CuteChat/Support-Image-Button.js.aspx"></script>*@
+
+    </div>
+    <div class="clearfix"></div>
+    <div id="comparelist-panel" style="background:#fff;display:none">
+        <div class="comparelist-wrapper" style="width:555px;background:url(/content/images/comparelist-bg.gif) no-repeat 128px center;border-top:1px solid #ddd;border-collapsed:collapsed">
+            <table class="table-striped table-condensed table-bordered table-text-sm" style="margin-bottom:0px;background:#fff">
+                <tr>
+                    <td style="width:126px;height:86px"><strong>Make / Model</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>SKU</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Model Code / Year</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Color / Transmission</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Mileage</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Engine / Fuel</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Seats</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Location</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Extras</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Price</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Get Quote</strong></td>
+                </tr>
+            </table>
+        </div>
+        <div style="padding:5px;overflow:auto">
+            <button class="btn btn-default btn-xs pull-left" id="clearCompareList-btn"><span class="glyphicon glyphicon-remove"></span> Remove All</button>
+            <span class="pull-right">
+                <button class="btn btn-default btn-xs" onclick="window.location='/Account/Login'"><span class="glyphicon glyphicon-log-in"></span> Login to Get Quotes</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="quoteRequestSent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Quote Request Sent</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success"><span class="glyphicon glyphicon-ok-sign"></span> Your request for quoatation of these vehicles has been submitted. You will be informed shortly via email. Thank you!<br /><br />You can check your quotes status in <a href="/Account/Index/Myquotes" class="alert-link">My Quotes</a> section.</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

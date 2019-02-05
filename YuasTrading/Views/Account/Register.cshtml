@@ -1,0 +1,386 @@
+﻿@model YuasTrading.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    //Layout = null;
+}
+
+<h2>@ViewBag.Title.</h2>
+<script type="text/javascript" src="https://yuasatrading.com/Scripts/zebra_datepicker.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#DateOfBirth').Zebra_DatePicker({
+            view: 'years',
+            //format: 'M d, Y'
+        });
+
+    });
+</script>
+@*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/css/default/zebra_datepicker.min.css">*@
+
+<link href="~/Content/yuas/zebra_datepicker.css" rel="stylesheet" />
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Create a new account.</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.RadioButtonFor(m => m.Gender, "Male", new { id = "male" }) Male
+            @Html.RadioButtonFor(m => m.Gender, "Female", new { id = "female" }) Female
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfBirth, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.DateOfBirth, new
+            {
+                @class = "form-control"@*, id = "DateOfBirth", @readonly = "readonly"*@})
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AccountType, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.RadioButtonFor(m => m.AccountType, "Personal Account", new { id = "personalAccount" }) Personal Account
+            @Html.RadioButtonFor(m => m.AccountType, "Company Account", new { id = "companyAccount" }) Company Account
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Company, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Company, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Country, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(x => x.Country, new List<SelectListItem>()
+{
+new SelectListItem(){Value="3",Text="Afghanistan"},
+new SelectListItem(){Value="17",Text="AlandIslands"},
+new SelectListItem(){Value="6",Text="Albania"},
+new SelectListItem(){Value="61",Text="Algeria"},
+new SelectListItem(){Value="13",Text="AmericanSamoa"},
+new SelectListItem(){Value="1",Text="Andorra"},
+new SelectListItem(){Value="9",Text="Angola"},
+new SelectListItem(){Value="5",Text="Anguilla"},
+new SelectListItem(){Value="11",Text="Antarctica"},
+new SelectListItem(){Value="4",Text="AntiguaandBarbuda"},
+new SelectListItem(){Value="12",Text="Argentina"},
+new SelectListItem(){Value="7",Text="Armenia"},
+new SelectListItem(){Value="16",Text="Aruba"},
+new SelectListItem(){Value="10",Text="Asia/PacificRegion"},
+new SelectListItem(){Value="15",Text="Australia"},
+new SelectListItem(){Value="14",Text="Austria"},
+new SelectListItem(){Value="18",Text="Azerbaijan"},
+new SelectListItem(){Value="32",Text="Bahamas"},
+new SelectListItem(){Value="25",Text="Bahrain"},
+new SelectListItem(){Value="21",Text="Bangladesh"},
+new SelectListItem(){Value="20",Text="Barbados"},
+new SelectListItem(){Value="36",Text="Belarus"},
+new SelectListItem(){Value="22",Text="Belgium"},
+new SelectListItem(){Value="37",Text="Belize"},
+new SelectListItem(){Value="27",Text="Benin"},
+new SelectListItem(){Value="28",Text="Bermuda"},
+new SelectListItem(){Value="33",Text="Bhutan"},
+new SelectListItem(){Value="30",Text="Bolivia"},
+new SelectListItem(){Value="19",Text="BosniaandHerzegovina"},
+new SelectListItem(){Value="35",Text="Botswana"},
+new SelectListItem(){Value="34",Text="BouvetIsland"},
+new SelectListItem(){Value="31",Text="Brazil"},
+new SelectListItem(){Value="106",Text="BritishIndianOceanTerritory"},
+new SelectListItem(){Value="29",Text="BruneiDarussalam"},
+new SelectListItem(){Value="24",Text="Bulgaria"},
+new SelectListItem(){Value="23",Text="BurkinaFaso"},
+new SelectListItem(){Value="26",Text="Burundi"},
+new SelectListItem(){Value="117",Text="Cambodia"},
+new SelectListItem(){Value="47",Text="Cameroon"},
+new SelectListItem(){Value="38",Text="Canada"},
+new SelectListItem(){Value="52",Text="CapeVerde"},
+new SelectListItem(){Value="124",Text="CaymanIslands"},
+new SelectListItem(){Value="41",Text="CentralAfricanRepublic"},
+new SelectListItem(){Value="212",Text="Chad"},
+new SelectListItem(){Value="46",Text="Chile"},
+new SelectListItem(){Value="48",Text="China"},
+new SelectListItem(){Value="53",Text="ChristmasIsland"},
+new SelectListItem(){Value="39",Text="Cocos(Keeling)Islands"},
+new SelectListItem(){Value="49",Text="Colombia"},
+new SelectListItem(){Value="119",Text="Comoros"},
+new SelectListItem(){Value="42",Text="Congo"},
+new SelectListItem(){Value="45",Text="CookIslands"},
+new SelectListItem(){Value="50",Text="CostaRica"},
+new SelectListItem(){Value="44",Text="Coted&#39;Ivoire"},
+new SelectListItem(){Value="98",Text="Croatia"},
+new SelectListItem(){Value="51",Text="Cuba"},
+new SelectListItem(){Value="54",Text="Cyprus"},
+new SelectListItem(){Value="55",Text="CzechRepublic"},
+new SelectListItem(){Value="121",Text="DemocraticPeople&#39;sRepublicofKorea"},
+new SelectListItem(){Value="58",Text="Denmark"},
+new SelectListItem(){Value="57",Text="Djibouti"},
+new SelectListItem(){Value="59",Text="Dominica"},
+new SelectListItem(){Value="60",Text="DominicanRepublic"},
+new SelectListItem(){Value="62",Text="Ecuador"},
+new SelectListItem(){Value="64",Text="Egypt"},
+new SelectListItem(){Value="208",Text="ElSalvador"},
+new SelectListItem(){Value="88",Text="EquatorialGuinea"},
+new SelectListItem(){Value="66",Text="Eritrea"},
+new SelectListItem(){Value="63",Text="Estonia"},
+new SelectListItem(){Value="68",Text="Ethiopia"},
+new SelectListItem(){Value="69",Text="Europe"},
+new SelectListItem(){Value="72",Text="FalklandIslands(Malvinas)"},
+new SelectListItem(){Value="74",Text="FaroeIslands"},
+new SelectListItem(){Value="73",Text="FederatedStatesofMicronesia"},
+new SelectListItem(){Value="71",Text="Fiji"},
+new SelectListItem(){Value="70",Text="Finland"},
+new SelectListItem(){Value="75",Text="France"},
+new SelectListItem(){Value="80",Text="FrenchGuiana"},
+new SelectListItem(){Value="174",Text="FrenchPolynesia"},
+new SelectListItem(){Value="213",Text="FrenchSouthernTerritories"},
+new SelectListItem(){Value="76",Text="Gabon"},
+new SelectListItem(){Value="85",Text="Gambia"},
+new SelectListItem(){Value="79",Text="Georgia"},
+new SelectListItem(){Value="56",Text="Germany"},
+new SelectListItem(){Value="82",Text="Ghana"},
+new SelectListItem(){Value="83",Text="Gibraltar"},
+new SelectListItem(){Value="89",Text="Greece"},
+new SelectListItem(){Value="84",Text="Greenland"},
+new SelectListItem(){Value="78",Text="Grenada"},
+new SelectListItem(){Value="87",Text="Guadeloupe"},
+new SelectListItem(){Value="92",Text="Guam"},
+new SelectListItem(){Value="91",Text="Guatemala"},
+new SelectListItem(){Value="81",Text="Guernsey"},
+new SelectListItem(){Value="86",Text="Guinea"},
+new SelectListItem(){Value="93",Text="Guinea-Bissau"},
+new SelectListItem(){Value="94",Text="Guyana"},
+new SelectListItem(){Value="99",Text="Haiti"},
+new SelectListItem(){Value="96",Text="HeardIslandandMcDonaldIslands"},
+new SelectListItem(){Value="233",Text="HolySee(VaticanCityState)"},
+new SelectListItem(){Value="97",Text="Honduras"},
+new SelectListItem(){Value="95",Text="HongKong"},
+new SelectListItem(){Value="100",Text="Hungary"},
+new SelectListItem(){Value="109",Text="Iceland"},
+new SelectListItem(){Value="105",Text="India"},
+new SelectListItem(){Value="101",Text="Indonesia"},
+new SelectListItem(){Value="107",Text="Iraq"},
+new SelectListItem(){Value="102",Text="Ireland"},
+new SelectListItem(){Value="108",Text="IslamicRepublicofIran"},
+new SelectListItem(){Value="104",Text="IsleofMan"},
+new SelectListItem(){Value="103",Text="Israel"},
+new SelectListItem(){Value="110",Text="Italy"},
+new SelectListItem(){Value="112",Text="Jamaica"},
+new SelectListItem(){Value="114",Text="Japan"},
+new SelectListItem(){Value="111",Text="Jersey"},
+new SelectListItem(){Value="113",Text="Jordan"},
+new SelectListItem(){Value="125",Text="Kazakhstan"},
+new SelectListItem(){Value="115",Text="Kenya"},
+new SelectListItem(){Value="118",Text="Kiribati"},
+new SelectListItem(){Value="123",Text="Kuwait"},
+new SelectListItem(){Value="116",Text="Kyrgyzstan"},
+new SelectListItem(){Value="126",Text="LaoPeople&#39;sDemocraticRepublic"},
+new SelectListItem(){Value="135",Text="Latvia"},
+new SelectListItem(){Value="127",Text="Lebanon"},
+new SelectListItem(){Value="132",Text="Lesotho"},
+new SelectListItem(){Value="131",Text="Liberia"},
+new SelectListItem(){Value="136",Text="LibyanArabJamahiriya"},
+new SelectListItem(){Value="129",Text="Liechtenstein"},
+new SelectListItem(){Value="133",Text="Lithuania"},
+new SelectListItem(){Value="134",Text="Luxembourg"},
+new SelectListItem(){Value="147",Text="Macao"},
+new SelectListItem(){Value="143",Text="Macedonia"},
+new SelectListItem(){Value="141",Text="Madagascar"},
+new SelectListItem(){Value="155",Text="Malawi"},
+new SelectListItem(){Value="157",Text="Malaysia"},
+new SelectListItem(){Value="154",Text="Maldives"},
+new SelectListItem(){Value="144",Text="Mali"},
+new SelectListItem(){Value="152",Text="Malta"},
+new SelectListItem(){Value="142",Text="MarshallIslands"},
+new SelectListItem(){Value="149",Text="Martinique"},
+new SelectListItem(){Value="150",Text="Mauritania"},
+new SelectListItem(){Value="153",Text="Mauritius"},
+new SelectListItem(){Value="243",Text="Mayotte"},
+new SelectListItem(){Value="156",Text="Mexico"},
+new SelectListItem(){Value="138",Text="Monaco"},
+new SelectListItem(){Value="146",Text="Mongolia"},
+new SelectListItem(){Value="140",Text="Montenegro"},
+new SelectListItem(){Value="151",Text="Montserrat"},
+new SelectListItem(){Value="137",Text="Morocco"},
+new SelectListItem(){Value="158",Text="Mozambique"},
+new SelectListItem(){Value="145",Text="Myanmar"},
+new SelectListItem(){Value="159",Text="Namibia"},
+new SelectListItem(){Value="168",Text="Nauru"},
+new SelectListItem(){Value="167",Text="Nepal"},
+new SelectListItem(){Value="165",Text="Netherlands"},
+new SelectListItem(){Value="8",Text="NetherlandsAntilles"},
+new SelectListItem(){Value="160",Text="NewCaledonia"},
+new SelectListItem(){Value="170",Text="NewZealand"},
+new SelectListItem(){Value="164",Text="Nicaragua"},
+new SelectListItem(){Value="161",Text="Niger"},
+new SelectListItem(){Value="163",Text="Nigeria"},
+new SelectListItem(){Value="169",Text="Niue"},
+new SelectListItem(){Value="162",Text="NorfolkIsland"},
+new SelectListItem(){Value="148",Text="NorthernMarianaIslands"},
+new SelectListItem(){Value="166",Text="Norway"},
+new SelectListItem(){Value="171",Text="Oman"},
+new SelectListItem(){Value="177",Text="Pakistan"},
+new SelectListItem(){Value="184",Text="Palau"},
+new SelectListItem(){Value="182",Text="PalestinianTerritory"},
+new SelectListItem(){Value="172",Text="Panama"},
+new SelectListItem(){Value="175",Text="PapuaNewGuinea"},
+new SelectListItem(){Value="185",Text="Paraguay"},
+new SelectListItem(){Value="173",Text="Peru"},
+new SelectListItem(){Value="176",Text="Philippines"},
+new SelectListItem(){Value="180",Text="Pitcairn"},
+new SelectListItem(){Value="178",Text="Poland"},
+new SelectListItem(){Value="183",Text="Portugal"},
+new SelectListItem(){Value="181",Text="PuertoRico"},
+new SelectListItem(){Value="186",Text="Qatar"},
+new SelectListItem(){Value="122",Text="RepublicofKorea"},
+new SelectListItem(){Value="139",Text="RepublicofMoldova"},
+new SelectListItem(){Value="187",Text="Reunion"},
+new SelectListItem(){Value="188",Text="Romania"},
+new SelectListItem(){Value="190",Text="RussianFederation"},
+new SelectListItem(){Value="191",Text="Rwanda"},
+new SelectListItem(){Value="198",Text="SaintHelena"},
+new SelectListItem(){Value="120",Text="SaintKittsandNevis"},
+new SelectListItem(){Value="128",Text="SaintLucia"},
+new SelectListItem(){Value="179",Text="SaintPierreandMiquelon"},
+new SelectListItem(){Value="234",Text="SaintVincentandtheGrenadines"},
+new SelectListItem(){Value="241",Text="Samoa"},
+new SelectListItem(){Value="203",Text="SanMarino"},
+new SelectListItem(){Value="207",Text="SaoTomeandPrincipe"},
+new SelectListItem(){Value="192",Text="SaudiArabia"},
+new SelectListItem(){Value="204",Text="Senegal"},
+new SelectListItem(){Value="189",Text="Serbia"},
+new SelectListItem(){Value="194",Text="Seychelles"},
+new SelectListItem(){Value="202",Text="SierraLeone"},
+new SelectListItem(){Value="197",Text="Singapore"},
+new SelectListItem(){Value="201",Text="Slovakia"},
+new SelectListItem(){Value="199",Text="Slovenia"},
+new SelectListItem(){Value="193",Text="SolomonIslands"},
+new SelectListItem(){Value="205",Text="Somalia"},
+new SelectListItem(){Value="244",Text="SouthAfrica"},
+new SelectListItem(){Value="90",Text="SouthGeorgiaandtheSouthSandwichIslands"},
+new SelectListItem(){Value="67",Text="Spain"},
+new SelectListItem(){Value="130",Text="SriLanka"},
+new SelectListItem(){Value="195",Text="Sudan"},
+new SelectListItem(){Value="206",Text="Suriname"},
+new SelectListItem(){Value="200",Text="SvalbardandJanMayen"},
+new SelectListItem(){Value="210",Text="Swaziland"},
+new SelectListItem(){Value="196",Text="Sweden"},
+new SelectListItem(){Value="43",Text="Switzerland"},
+new SelectListItem(){Value="209",Text="SyrianArabRepublic"},
+new SelectListItem(){Value="225",Text="Taiwan"},
+new SelectListItem(){Value="216",Text="Tajikistan"},
+new SelectListItem(){Value="226",Text="Tanzania"},
+new SelectListItem(){Value="215",Text="Thailand"},
+new SelectListItem(){Value="40",Text="TheDemocraticRepublicoftheCongo"},
+new SelectListItem(){Value="218",Text="Timor-Leste"},
+new SelectListItem(){Value="214",Text="Togo"},
+new SelectListItem(){Value="217",Text="Tokelau"},
+new SelectListItem(){Value="221",Text="Tonga"},
+new SelectListItem(){Value="223",Text="TrinCountryCodeadandTobago"},
+new SelectListItem(){Value="220",Text="Tunisia"},
+new SelectListItem(){Value="222",Text="Turkey"},
+new SelectListItem(){Value="219",Text="Turkmenistan"},
+new SelectListItem(){Value="211",Text="TurksandCaicosIslands"},
+new SelectListItem(){Value="224",Text="Tuvalu"},
+new SelectListItem(){Value="228",Text="Uganda"},
+new SelectListItem(){Value="227",Text="Ukraine"},
+new SelectListItem(){Value="2",Text="UnitedArabEmirates"},
+new SelectListItem(){Value="77",Text="UnitedKingdom"},
+new SelectListItem(){Selected=true, Value="230",Text="UnitedStates"},
+new SelectListItem(){Value="229",Text="UnitedStatesMinorOutlyingIslands"},
+new SelectListItem(){Value="231",Text="Uruguay"},
+new SelectListItem(){Value="232",Text="Uzbekistan"},
+new SelectListItem(){Value="239",Text="Vanuatu"},
+new SelectListItem(){Value="235",Text="Venezuela"},
+new SelectListItem(){Value="238",Text="Vietnam"},
+new SelectListItem(){Value="236",Text="VirginIslands,British"},
+new SelectListItem(){Value="237",Text="VirginIslands,U.S."},
+new SelectListItem(){Value="240",Text="WallisandFutuna"},
+new SelectListItem(){Value="65",Text="WesternSahara"},
+new SelectListItem(){Value="242",Text="Yemen"},
+new SelectListItem(){Value="245",Text="Zambia"},
+new SelectListItem(){Value="246",Text="Zimbabwe"}
+}, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.City, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Address, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(x => x.Address, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PostalCode, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.PostalCode, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", id = "ConfirmPassword" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.CheckBoxFor(m => m.SubscribeForNewsletters, new { @checked = "checked" })
+            @Html.LabelFor(m => m.SubscribeForNewsletters)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.CheckBoxFor(m => m.AcceptTermsConditions)
+            @Html.LabelFor(m => m.AcceptTermsConditions)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

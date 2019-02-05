@@ -1,0 +1,1524 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Yuasa Trading Co, Japan (Used Cars Exporter, Japanese Used Car Dealer)</title>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" href="/favico.png" />
+    <script>
+    if (window.self != window.top) parent.window.location = window.location.pathname;
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/styles.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.8.3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script type="text/javascript" src="/Scripts/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <link href="/Content/flags.css" rel="stylesheet" />
+
+    <link href="/Content/slick-slider/slick.css" rel="stylesheet" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/Content/slick-slider/slick.min.js"></script>
+
+    <script src="/Scripts/responsiveCarousel.min.js"></script>
+
+    <script src="/Scripts/jcarousellite_1.0.1.pack.js"></script>
+
+
+    <script src="/Scripts/jquery.mousewheel.js"></script>
+    <script src="/Scripts/ilightbox.js"></script>
+
+    <style type="text/css">
+        @media screen and (max-width: 991px) {
+            .selection-wrapper {
+                display: block;
+                border-radius: 6px;
+                float: none;
+            }
+
+            .low-mileage {
+                margin-top: 15px;
+            }
+        }
+    </style>
+    <script>
+    var captchaIsValid = false;
+
+    $(document).ready(function () {
+        $('.top-menu a[href="' + window.location.pathname + '"]').addClass("active");
+
+        $('form[data-captcha="true"]').on('submit', function (e) {
+            var elm = $(this);
+            if (captchaIsValid == false && elm.valid()) {
+                e.preventDefault();
+                elm.find('.captcha-validator').hide();
+                if (Recaptcha.get_response().length > 0) {
+                    $.post('/Recaptcha/Validate', { challenge: Recaptcha.get_challenge(), response: Recaptcha.get_response() }, function (data) {
+                        if (data) {
+                            captchaIsValid = true;
+                            elm.submit();
+                        }
+                        else {
+                            Recaptcha.reload();
+                            elm.find('.captcha-validator').show();
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+    $.fn.resetForm = function () {
+        this.find('select').each(function () { $(this).prop('selectedIndex', 0);; });
+        this.find('input[type=text], input[type=password], input[type=hidden], textarea').each(function () { $(this).val(''); });
+        this.find('input:checked').each(function () { $(this).removeAttr('checked'); });
+    };
+    </script>
+
+
+    <meta name="keywords" content="Japanese used cars, used cars and trucks, cars for sale in Tanzania, Car Dealers in Tanzania, Japanese used cars in Uganda, used toyota car in Tanzania, Yuasa Autos, used car dealers, Yuasa cars," />
+    <meta name="author" content="Administrator" />
+    <meta name="title" content="Japanese Used Cars | YUASA TRADING" />
+    <meta name="description" content="YUASA TRADING leading car exporter of preowned cars directly from Japan, To Tanzania (Yuasa Auto Impex), Kenya (Yuasa Motors), Uganda (Yuasa Investments)" />
+    <meta name="generator" content="YUASA TRADING" />
+    <meta name="Search.Engines" content="Google, google, Yahoo, Bing, Altavista, AoLNet, Infoseek, Excite, Hotbot, Lycos, Magellan, LookSmart, CNet" />
+    <meta name="email" content="email@domain.com" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Rating" content="General" />
+    <meta name="robots" content="index,follow" />
+    <meta name="GOOGLEBOT" content="INDEX, FoLLoW" />
+    <meta name="Revisit-after" content="2 Days" />
+    <meta name="language" content="English" />
+    <meta name="channel" content="channeltype" />
+    <meta name="google-site-verification" content="WoOtdgpe8D6-Ia4fLzOqwKsbzdXDpWVyk9bVUaB4a6w" />
+    <meta name="msvalidate.01" content="2F746455DCD3DBA71FB9CB77C4010B22" />
+    <link rel="alternate" href="https://yuasatrading.com" lang="en-tz" />
+    <meta name="DC.title" content="Yuasa Trading" />
+    <meta name="geo.region" content="TZ-02" />
+    <meta name="geo.placename" content="Dar es Salaam" />
+    <meta name="geo.position" content="-6.78463;39.27612" />
+    <meta name="ICBM" content="-6.78463, 39.27612" />
+    <meta name="p:domain_verify" content="17af7547a4b2e098efc7f47940fb6f51" />
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1586531728290446";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="header-wrapper hidden-print">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 col-md-4">
+                    <div class="row" style="max-height:69px;overflow:hidden">
+                        <div class="col-sm-12 col-lg-11 col-md-11" style="padding-top:20px;">
+
+                            <a href="/">
+                                <img src="/content/images/logo.png" alt="Yuasa Trading" style="margin-top:5px;max-width:318px;width:100%" />
+                            </a>
+                        </div>
+                        <div class="col-md-offset-1 col-lg-offset-1 text-right">
+
+                        </div>
+                    </div>
+                    <script src="/LiveChat/CuteSoft_Client/CuteChat/Support-Visitor-monitor.js.aspx"></script>
+                </div>
+                <div class="col-md-3 col-lg-3" style="text-align:center;">
+                    <div style="color: #999; font-size: 20px;">Current Stock: </div>
+                </div>
+                <div class="col-md-5 col-lg-5 ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="selection-wrapper">
+                                <div class="dropdown" id="langDDL" style="color:white !important ">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="javascript:void(0)"><img src="/content/images/language.png" alt="language" style="width:16px;height:16px;vertical-align:middle" /> English <span class="caret caret-white"></span></a>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="/Home/Lang/en?ReturnUrl=%2F">English</a></li>
+                                        <li><a href="/Home/Lang/fr?ReturnUrl=%2F">French</a></li>
+                                        <li><a href="/Home/Lang/ja?ReturnUrl=%2F">Japanese</a></li>
+                                        <li><a href="/Home/Lang/pt?ReturnUrl=%2F">Portuguese</a></li>
+                                        <li><a href="/Home/Lang/ru?ReturnUrl=%2F">Russian</a></li>
+
+
+                                    </ul>
+                                    <script>
+                                    function getCookie(cname) {
+                                        var name = cname + "=";
+                                        var ca = document.cookie.split(';');
+                                        for (var i = 0; i < ca.length; i++) {
+                                            var c = ca[i];
+                                            while (c.charAt(0) == ' ') c = c.substring(1);
+                                            if (c.indexOf(name) != -1) {
+                                                return c.substring(name.length, c.length);
+                                            }
+                                        }
+                                        return "";
+                                    }
+                                    if (getCookie("AppLang") != null) {
+                                        var appLang = getCookie("AppLang");
+                                        if (appLang != "en") {
+                                            LangCaption = "";
+                                            switch (appLang)
+                                            {
+                                                case "fr":
+                                                    LangCaption = 'French';
+                                                    break;
+                                                case "ja":
+                                                    LangCaption = 'Japanese';
+                                                    break;
+                                                case "ur":
+                                                    LangCaption = 'Urdu';
+                                                    break;
+                                                case "pt":
+                                                    LangCaption = 'Portuguese';
+                                                    break;
+                                                case "ru":
+                                                    LangCaption = 'Russian';
+                                                    break;
+                                                default:
+                                                    LangCaption = 'English';
+                                            }
+                                            $('#langDDL > a').html('<img src="/content/images/language.png" alt="language image" style="width:16px;height:16px;vertical-align:middle" /> ' + LangCaption + ' <span class="caret caret-white"></span>');
+                                        }
+                                    }
+                                    </script>
+
+                                </div>
+
+                                <div class="dropdown">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="#"><img src="/content/images/skype.png" alt="skype" style="width:16px;height:16px;vertical-align:middle" /> Skype Call <span class="caret caret-white"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="skype:Yuasa_sales.Tz?call" title="offline">
+                                                <span class="skype-i i-offline"></span>
+
+                                                <strong>Tanzania Sales</strong>
+                                                <span class="text-muted text-sm"> &bull; <em>English, Swahili </em></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="skype:Yuasa_sales.Ke?call" title="offline">
+                                                <span class="skype-i i-offline"></span>
+
+                                                <strong>Kenya Sales</strong>
+                                                <span class="text-muted text-sm"> &bull; <em>English, Swahili</em></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown" id="showroomsDDL">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="#"></a>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="/"><span class="glyphicon glyphicon-globe"></span> Global</a></li>
+                                        <li><a href="/jp" data-countryCode="jp"><span class="flag flag-jp"></span> Japan</a></li>
+                                        <li><a href="/tz" data-countryCode="tz"><span class="flag flag-tz"></span> Tanzania</a></li>
+                                        <li><a href="/ke" data-countryCode="ke"><span class="flag flag-ke"></span> Kenya</a></li>
+                                        <li><a href="/ug" data-countryCode="ug"><span class="flag flag-ug"></span> Uganda</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <script>
+                                 $('#showroomsDDL > a').html('<span class="glyphicon glyphicon-globe"></span> Global' + ' <span class="caret caret-white"></span>');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <ul class="header-menu">
+                                <li><a href="/Account/Register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="#"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret caret-white"></span></a>
+                                    <div class="dropdown-menu pull-right" role="menu" style="padding:5px;width:280px;color:#333">
+                                        <form action="/Account/Login?ReturnUrl=/" method="post">
+                                            <table style="width:100%;">
+                                                <tr>
+                                                    <td style="padding:5px;"><input class="form-control" data-val="true" data-val-required="The Email field is required." id="EmailId" name="Email" placeholder="enter your email" type="email" value="" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;"><input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="enter your password" type="password" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;">
+                                                        <div class="pull-left">
+                                                            <input data-val="true" data-val-required="The Remember me field is required." id="Remember" name="Remember" type="checkbox" value="true" /><input name="Remember" type="hidden" value="false" /> <label for="Remember">Remember me</label>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <input type="submit" class="form-button" value="Sign in" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;"><a href="/Account/Register" style="color:#b10000">New members start here</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;"><a href="/Account/Recovery" style="color:#b10000">Forgot password?</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center; padding:5px;">
+                                                        <div style="margin:0 auto 15px auto;position:relative;width:100%">
+                                                            <div style="height:11px;border-bottom:1px solid #dfdfdf"></div>
+                                                            <span style="top:0;left:43%;position:absolute;background:#fff;padding:0 11px;">OR</span>
+                                                        </div>
+
+                                                        <a href="/Account/FacebookLogin" title="Login with Facebook">
+                                                            <img src="/Content/Images/facebook-login.png" alt="facebook login" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </div>
+                                    <script>
+                                        $('.dropdown-menu input').keydown(function (e) {
+                                            e.stopPropagation();
+                                        });
+                                    </script>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div itemscope itemtype="http://schema.org/Organization" style="display:none">
+        <a itemprop="url" href="https://yuasatrading.com">
+            <div itemprop="name"><strong>Yuasa Trading Co,</strong></div>
+        </a>
+        <div itemprop="description">YUASA TRADING leading car exporter of preowned cars directly from Japan, To Tanzania (Yuasa Auto Impex), Kenya (Yuasa Motors), Uganda (Yuasa Investments)</div>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">New Bagamoyo Rd, Opp Gapco Victoria Fuel Stand,</span><br>
+            P.O. Box: <span itemprop="postOfficeBoxNumber">P.O. Box 3091</span><br>
+            <span itemprop="addressLocality">Dar-es-salaam</span><br>
+            <span itemprop="addressRegion">Dar es Salaam</span><br>
+            <span itemprop="addressCountry">Tanzania</span><br>
+        </div>
+    </div>
+
+    <div class="menu-wrapper hidden-print">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav top-menu">
+                    <li><a href='/'>HOME</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="anchor-wrapper" href="#">ADVANCE ORDERS <span class="caret caret-white"></span></a>
+                        <ul class="dropdown-menu" id="advanceOrderDDL" role="menu" style="background-color: white; margin-top: -1px; width: 100%;">
+                            <li><a href="/Catalog/AdvanceOrder">Place Advance Order</a></li>
+                            <li><a href="/Catalog/TrackOrder">Track Order</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Catalog/Search'>SEARCH</a></li>
+                    <li><a href='/Blog'>BLOG</a></li>
+
+                    <li><a href='/Inquiry'>INQUIRY</a></li>
+                    <li><a href='/Promotions'>PROMOTIONS</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm hidden-md" style="padding-left:16px;">
+                    <li><span class="yticon yticon-email"></span> Email: info@yuasatrading.com</li>
+                    <li><span class="yticon yticon-phone"></span> Phone: (+81) 480-726955</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-9">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+
+                        <li data-target="#carousel-example-generic" data-slide-to="0"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item" style="height:300px;text-align:center;overflow:hidden">
+                            <img src="/Img/Get/slide_3.jpg?w=848&amp;h=300&amp;wm=False&amp;d=slides%2F" style="width:848px;height:300px;" />
+
+                        </div>
+                        <div class="item" style="height:300px;text-align:center;overflow:hidden">
+                            <img src="/Img/Get/slide_2.jpg?w=848&amp;h=300&amp;wm=False&amp;d=slides%2F" style="width:848px;height:300px;" />
+
+                        </div>
+                        <div class="item" style="height:300px;text-align:center;overflow:hidden">
+                            <img src="/Img/Get/slide_4.jpg?w=848&amp;h=300&amp;wm=False&amp;d=slides%2F" style="width:848px;height:300px;" />
+
+                        </div>
+                        <div class="item" style="height:300px;text-align:center;overflow:hidden">
+                            <img src="/Img/Get/slide_19.jpg?w=848&amp;h=300&amp;wm=False&amp;d=slides%2F" style="width:848px;height:300px;" />
+
+                        </div>
+                        <div class="item" style="height:300px;text-align:center;overflow:hidden">
+                            <img src="/Img/Get/slide_14.jpg?w=848&amp;h=300&amp;wm=False&amp;d=slides%2F" style="width:848px;height:300px;" />
+
+                        </div>
+                        <div class="item" style="height:300px;text-align:center;overflow:hidden">
+                            <img src="/Img/Get/slide_20.jpg?w=848&amp;h=300&amp;wm=False&amp;d=slides%2F" style="width:848px;height:300px;" />
+
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
+                <script>
+    $('.carousel .carousel-indicators li:first').addClass("active");
+    $('.carousel .carousel-inner .item:first').addClass("active");
+                </script>
+            </div>
+
+            <div class="col-sm-12 col-md-3">
+                <style type="text/css" scoped>
+                    .tooltip-inner {
+                        max-width: 250px !important;
+                    }
+                </style>
+                <div class="search-block clearfix">
+                    <div class="title">SEARCH</div>
+                    <form action="/Catalog/Search" id="searchBlock" method="get">
+                        <select class="form-control input-sm" id="ManufacturerId" name="ManufacturerId">
+                            <option value="">Select Make</option>
+                            <option value="49">Audi</option>
+                            <option value="44">BMW</option>
+                            <option value="46">Chrysler</option>
+                            <option value="40">Daihatsu</option>
+                            <option value="48">Ford</option>
+                            <option value="41">Hino</option>
+                            <option value="38">Honda</option>
+                            <option value="37">Isuzu</option>
+                            <option value="54">John Deere</option>
+                            <option value="45">Land Rover</option>
+                            <option value="53">Lexus</option>
+                            <option value="52">Massey Ferguson</option>
+                            <option value="42">Mazda</option>
+                            <option value="43">Mercedes Benz</option>
+                            <option value="36">Mitsubishi</option>
+                            <option value="34">Nissan</option>
+                            <option value="51">Scania</option>
+                            <option value="39">Subaru</option>
+                            <option value="35">Suzuki</option>
+                            <option value="33">Toyota</option>
+                            <option value="47">Volks Wagon</option>
+                            <option value="50">Volvo</option>
+                        </select>        <select name="ModelId" id="ModelId" class="form-control input-sm"><option value="">Select Model</option></select>
+                        <select class="form-control input-sm" id="Year" name="Year">
+                            <option value="">Select Year</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                            <option value="1988">1988</option>
+                            <option value="1987">1987</option>
+                            <option value="1986">1986</option>
+                            <option value="1985">1985</option>
+                            <option value="1984">1984</option>
+                            <option value="1983">1983</option>
+                            <option value="1982">1982</option>
+                            <option value="1981">1981</option>
+                            <option value="1980">1980</option>
+                            <option value="1979">1979</option>
+                            <option value="1978">1978</option>
+                            <option value="1977">1977</option>
+                            <option value="1976">1976</option>
+                            <option value="1975">1975</option>
+                            <option value="1974">1974</option>
+                            <option value="1973">1973</option>
+                            <option value="1972">1972</option>
+                            <option value="1971">1971</option>
+                            <option value="1970">1970</option>
+                            <option value="1969">1969</option>
+                            <option value="1968">1968</option>
+                            <option value="1967">1967</option>
+                            <option value="1966">1966</option>
+                            <option value="1965">1965</option>
+                            <option value="1964">1964</option>
+                            <option value="1963">1963</option>
+                            <option value="1962">1962</option>
+                            <option value="1961">1961</option>
+                            <option value="1960">1960</option>
+                        </select>        <div class="control-help">
+                            <input class="form-control input-sm" id="Keywords" name="Keywords" placeholder="Search Keyword" type="text" value="" />
+                            <span class="glyphicon glyphicon-question-sign help-icon" data-container="body" style="text-align:right;" data-html="true" data-toggle="tooltip" data-placement="top" title="SKU, Make, Model, Make +Model, Model Code, Year, Make + Year, Model + Year, Color, Make + Color, Model + Color, Fuel, Make +Fuel, Model + Fuel, Office file # <br> ----------------------------------------------- <br> Any of above mentioned search terms may be used. Each search term or combination is seperated by comas, only one search term can be used at one time."></span>
+                        </div>
+                        <input type="submit" class="form-button pull-left" value="Search" style="padding:7px 9px" />
+                    </form>    <a href="/Catalog/Search">Advanced Search</a>
+
+                    <div class="alert alert-danger search-validation" style="display:none">
+                        <span class="close" onclick="$(this).parent().fadeOut(100)">&times;</span>
+                        <span class='glyphicon glyphicon-remove-sign'></span> Please select Make or Model or enter SKU No# to start searching for used cars.
+                    </div>
+                </div>
+                <script>
+    $(function () {
+        $('.help-icon').tooltip();
+        //$('.tooltiplink').tooltip();
+        $('#searchBlock #ManufacturerId').on('change', function () {
+            $("#searchBlock #ModelId").empty().append('<option value="">Select Model</option>');
+            $.post("/Helper/GetModelsInStock/" + $('#searchBlock #ManufacturerId').val(), function (data) {
+                //alert(data);
+                $(data).each(function () {
+                    $("#searchBlock #ModelId").append($("<option></option>").val(this.Value).html(this.Text));
+                });
+
+            });
+        });
+
+
+        $('#searchBlock').on('submit', function (e) {
+            if ($('#searchBlock #ManufacturerId').val() + $('#searchBlock #ModelId').val() + $('#searchBlock #Year').val() + $('#searchBlock #Keywords').val() == "") {
+                e.preventDefault();
+                $('.search-validation').fadeIn(100);
+            }
+        });
+    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-3 hidden-print">
+
+
+                <div class="heading-bar">
+                    <span class="title">Like us on Faceook</span>
+                </div>
+                <div class="block block-pad">
+                    <div class="clearfix" style="text-align:center;">
+                        <div class="fb-like" data-href="https://www.facebook.com/yuasatrading" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+
+                <div class="heading-bar">
+                    <span class="title">SPECIAL OFFERS</span>
+                    <a href="/SpecialOffers" class="button">View All</a>
+                </div>
+                <div class="block">
+                    <ul class="block-list clearfix">
+                        <li class="clearfix" style="padding-top:5px;padding-bottom:5px">
+                            <a href="/Catalog/Details/ytc-3253">
+                                <img class="img-responsive img-thumbnail center-block" src="/Img/Get/3253.jpg?w=151&amp;h=95&amp;sku=1557&amp;isReserved=False&amp;isSold=False" title="Toyota Land Cruiser Wagon" alt="Toyota Land Cruiser Wagon">
+                            </a>
+                            <div class="clearfix" style="margin:3px 0">
+                                <a href="/Catalog/Details/ytc-3253">
+                                    <strong>
+                                        <span class="pull-left">Land Cruiser Wagon</span>
+                                        <span class="pull-right">2016</span>
+                                    </strong>
+                                </a>
+                            </div>
+                            <div class="clearfix">
+                                <span class="pull-left"><strong>DDP:</strong> <span class="text-st text-muted ">130,000</span></span>
+                                <span class="pull-right">127,600 US $</span>
+                            </div>
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <div class="text-muted" style="margin-top:3px;font-size:11px;font-style:italic">
+                                        <span class="flag flag-ug"></span>
+                                        Uganda
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <span class="glyphicon glyphicon-gift help-icon" style="color:#468847;cursor:pointer" data-toggle="tooltip" data-placement="top" title="SPECIAL OFFER: Fully Serviced, Full Tank Fuel"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix" style="padding-top:5px;padding-bottom:5px">
+                            <a href="/Catalog/Details/ytc-3234">
+                                <img class="img-responsive img-thumbnail center-block" src="/Img/Get/3234.jpg?w=151&amp;h=95&amp;sku=1538&amp;isReserved=False&amp;isSold=False" title="Nissan Civilian" alt="Nissan Civilian">
+                            </a>
+                            <div class="clearfix" style="margin:3px 0">
+                                <a href="/Catalog/Details/ytc-3234">
+                                    <strong>
+                                        <span class="pull-left">Civilian</span>
+                                        <span class="pull-right">1998</span>
+                                    </strong>
+                                </a>
+                            </div>
+                            <div class="clearfix">
+                                <span class="pull-left"><strong>DDP:</strong> <span class="text-st text-muted ">23,000</span></span>
+                                <span class="pull-right">21,000 US $</span>
+                            </div>
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <div class="text-muted" style="margin-top:3px;font-size:11px;font-style:italic">
+                                        <span class="flag flag-tz"></span>
+                                        Tanzania
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix" style="padding-top:5px;padding-bottom:5px">
+                            <a href="/Catalog/Details/ytc-3124">
+                                <img class="img-responsive img-thumbnail center-block" src="/Img/Get/3124.jpg?w=151&amp;h=95&amp;sku=1427&amp;isReserved=False&amp;isSold=False" title="Chrysler Jeep Cherokee" alt="Chrysler Jeep Cherokee">
+                            </a>
+                            <div class="clearfix" style="margin:3px 0">
+                                <a href="/Catalog/Details/ytc-3124">
+                                    <strong>
+                                        <span class="pull-left">Jeep Cherokee</span>
+                                        <span class="pull-right">2005</span>
+                                    </strong>
+                                </a>
+                            </div>
+                            <div class="clearfix">
+                                <span class="pull-left"><strong>DDP:</strong> <span class="text-st text-muted ">19,400</span></span>
+                                <span class="pull-right">13,800 US $</span>
+                            </div>
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <div class="text-muted" style="margin-top:3px;font-size:11px;font-style:italic">
+                                        <span class="flag flag-tz"></span>
+                                        Tanzania
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="heading-bar">
+                    <span class="title">SEARCH BY TYPE</span>
+                </div>
+
+                <div class="block">
+                    <ul class="vtype-list clearfix">
+                        <li><a href="/Type/Sedan" class="sedan"><span></span><br />Sedan</a></li>
+                        <li><a href="/Type/Hatchback" class="hatchback"><span></span><br />Hatchback</a></li>
+                        <li><a href="/Type/Sport" class="sport"><span></span><br />Sport</a></li>
+                        <li><a href="/Type/SUV_or_4WD" class="suv_or_4wd"><span></span><br />SUV or 4WD</a></li>
+                        <li><a href="/Type/Wagon" class="wagon"><span></span><br />Wagon</a></li>
+                        <li><a href="/Type/Van" class="van"><span></span><br />Van</a></li>
+                        <li><a href="/Type/Mini_Bus" class="mini_bus"><span></span><br />Mini Bus</a></li>
+                        <li><a href="/Type/Bus" class="bus"><span></span><br />Bus</a></li>
+                        <li><a href="/Type/Truck" class="truck"><span></span><br />Truck</a></li>
+                        <li><a href="/Type/Machinery" class="machinery"><span></span><br />Machinery</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="heading-bar">
+                    <span class="title">Recent Posts</span>
+                    <a class="button" href="/Blog">View All</a>
+                </div>
+                <div class="block">
+                    <ul class="block-list blog-list">
+                        <li>
+                            <a href="/Blog/Post/auto-window-roll-down-stopped-working"><strong>Auto window roll down stopped working</strong></a>
+                            <br />
+                            In Japanese Cars auto window roll down feature stopped working, How to fix it with out going to garage and paying unnecessary costs.
+                            <div class="clearfix readm">
+                                <div class="pull-left text-muted" style="margin:3px 0;font-size:11px;font-style:italic">
+                                    Mar 18, 2015 06:30 PM
+                                </div>
+                                <a class="pull-right" style="font-size:12px;" href="/Blog/Post/auto-window-roll-down-stopped-working">Read More <span class="glyphicon glyphicon-share-alt"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+
+
+
+
+                <div class="heading-bar">
+                    <span class="title">REGIONAL SHOWROOMS</span>
+
+                </div>
+
+                <div class="block">
+                    <div class="flags-slider">
+                        <div class="flag-item">
+                            <a href="/jp">
+                                <span class="flag-lg flag-jp"></span>
+                                <div>Japan</div>
+                            </a>
+                        </div>
+                        <div class="flag-item">
+                            <a href="/tz">
+                                <span class="flag-lg flag-tz"></span>
+                                <div>Tanzania</div>
+                            </a>
+                        </div>
+                        <div class="flag-item">
+                            <a href="/ke">
+                                <span class="flag-lg flag-ke"></span>
+                                <div>Kenya</div>
+                            </a>
+                        </div>
+                        <div class="flag-item">
+                            <a href="/ug">
+                                <span class="flag-lg flag-ug"></span>
+                                <div>Uganda</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+    $('.flags-slider').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+        }]
+    });
+                </script>
+                <h2>New Arrivals</h2>
+
+                <div class="row">
+                    <div class="clearfix">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3253" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3253.jpg?w=700&amp;h=432&amp;sku=3253&amp;isReserved=False&amp;isSold=False" title="Toyota Land Cruiser Wagon" alt="Toyota Land Cruiser Wagon">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Toyota Land Cruiser Wagon</strong>
+                                        <strong class="pull-right">2016</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            <span class="glyphicon glyphicon-gift help-icon" style="color:#468847;cursor:pointer" data-toggle="tooltip" data-placement="top" title="SPECIAL OFFER: Fully Serviced, Full Tank Fuel"></span>
+                                            3253
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Uganda</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="URJ202W-4120337">URJ202W-4120337</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <span class="pull-left">
+                                            <strong>DDP:</strong> <span class="text-st text-muted">130,000</span>                                            <br /><strong>US $ </strong> 127,600
+                                        </span>
+                                        <a href="/Catalog/Details/ytc-3253" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3240" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3240.jpg?w=700&amp;h=432&amp;sku=3240&amp;isReserved=False&amp;isSold=False" title="Toyota Ractis" alt="Toyota Ractis">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Toyota Ractis</strong>
+                                        <strong class="pull-right">2006</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3240
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Tanzania</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="SCP100-0017927">SCP100-0017927</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3240" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3234" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3234.jpg?w=700&amp;h=432&amp;sku=3234&amp;isReserved=False&amp;isSold=False" title="Nissan Civilian" alt="Nissan Civilian">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Nissan Civilian</strong>
+                                        <strong class="pull-right">1998</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3234
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Tanzania</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="RGW40-102138">RGW40-102138</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <span class="pull-left">
+                                            <strong>DDP:</strong> <span class="text-st text-muted">23,000</span>                                            <br /><strong>US $ </strong> 21,000
+                                        </span>
+                                        <a href="/Catalog/Details/ytc-3234" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3231" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3231.jpg?w=700&amp;h=432&amp;sku=3231&amp;isReserved=False&amp;isSold=False" title="Suzuki Escudo" alt="Suzuki Escudo">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Suzuki Escudo</strong>
+                                        <strong class="pull-right">2006</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3231
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Uganda</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="TD54W-202491">TD54W-202491</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3231" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3229" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3229.jpg?w=700&amp;h=432&amp;sku=3229&amp;isReserved=False&amp;isSold=False" title="Toyota Harrier" alt="Toyota Harrier">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Toyota Harrier</strong>
+                                        <strong class="pull-right">2008</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3229
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Uganda</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="ACU35W-0022688">ACU35W-0022688</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3229" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3202" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3202.jpg?w=700&amp;h=432&amp;sku=3202&amp;isReserved=False&amp;isSold=False" title="Toyota Wish" alt="Toyota Wish">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Toyota Wish</strong>
+                                        <strong class="pull-right">2005</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3202
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Tanzania</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="ZNE10-0240536">ZNE10-0240536</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3202" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3201" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3201.jpg?w=700&amp;h=432&amp;sku=3201&amp;isReserved=False&amp;isSold=False" title="Toyota Passo" alt="Toyota Passo">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Toyota Passo</strong>
+                                        <strong class="pull-right">2006</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3201
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Tanzania</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="KGC10-0125518">KGC10-0125518</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3201" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3200" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3200.jpg?w=700&amp;h=432&amp;sku=3200&amp;isReserved=False&amp;isSold=False" title="Suzuki Swift" alt="Suzuki Swift">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Suzuki Swift</strong>
+                                        <strong class="pull-right">2003</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3200
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Tanzania</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="HT51S-803546">HT51S-803546</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3200" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail clearfix product-box">
+                                <a href="/Catalog/Details/ytc-3195" target="_blank">
+                                    <img class="product-img img-responsive" src="/Img/Get/3195.jpg?w=700&amp;h=432&amp;sku=3195&amp;isReserved=False&amp;isSold=False" title="Toyota Raum" alt="Toyota Raum">
+                                </a>
+                                <div class="caption">
+                                    <div class="clearfix title">
+                                        <strong class="pull-left">Toyota Raum</strong>
+                                        <strong class="pull-right">2008</strong>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">SKU #:</span>
+                                        <span class="pull-right">
+                                            3195
+                                        </span>
+                                    </div>
+                                    <div class="clearfix"><span class="pull-left">Location:</span><span class="pull-right">Tanzania</span></div>
+                                    <div class="clearfix "><span class="pull-left">Chassis:</span><span class="pull-right chasisstyle" title="NCZ20-0126894">NCZ20-0126894</span></div>
+                                    <div class="clearfix" style="height:40px">
+                                        <a href="/Catalog/Details/ytc-3195" class="details-btn pull-right" target="_blank">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+    $('.add-to-wishlist').click(function () {
+        var $elm = $(this);
+        $.post("/Account/AddToWishlist/" + $(this).data("sku"), function (d) {
+
+            if (d == true) {
+                alert("Wish List Updated Successfully")
+                $elm.unbind('click').attr('disabled', 'disabled');
+            }
+            else
+                if (d == false) {
+                    alert("Vehicle already in your wish list")
+                    $elm.unbind('click').attr('disabled', 'disabled');
+                }
+
+        });
+    });
+                </script>
+
+
+                <div class="row" style="margin-bottom:0">
+                    <div class="col-sm-12 clearfix">
+                        <div class="heading-bar hidden-print">
+                            <span class="title">BROWSE BY BRAND</span>
+
+                        </div>
+                        <div class="block hidden-print">
+                            <div class="brand-slider">
+                                <div>
+                                    <a href="/Brand/toyota">
+                                        <img src="/Img/Get/33.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Toyota" title="Toyota" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/nissan">
+                                        <img src="/Img/Get/34.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Nissan" title="Nissan" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/suzuki">
+                                        <img src="/Img/Get/35.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Suzuki" title="Suzuki" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/mitsubishi">
+                                        <img src="/Img/Get/36.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Mitsubishi" title="Mitsubishi" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/isuzu">
+                                        <img src="/Img/Get/37.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Isuzu" title="Isuzu" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/honda">
+                                        <img src="/Img/Get/38.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Honda" title="Honda" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/subaru">
+                                        <img src="/Img/Get/39.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Subaru" title="Subaru" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/daihatsu">
+                                        <img src="/Img/Get/40.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Daihatsu" title="Daihatsu" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/hino">
+                                        <img src="/Img/Get/41.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Hino" title="Hino" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/mazda">
+                                        <img src="/Img/Get/42.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Mazda" title="Mazda" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/mercedes-benz">
+                                        <img src="/Img/Get/43.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Mercedes Benz" title="Mercedes Benz" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/bmw">
+                                        <img src="/Img/Get/44.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="BMW" title="BMW" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/land-rover">
+                                        <img src="/Img/Get/45.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Land Rover" title="Land Rover" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/chrysler">
+                                        <img src="/Img/Get/46.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Chrysler" title="Chrysler" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/volks-wagon">
+                                        <img src="/Img/Get/47.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Volks Wagon" title="Volks Wagon" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/ford">
+                                        <img src="/Img/Get/48.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Ford" title="Ford" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/audi">
+                                        <img src="/Img/Get/49.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Audi" title="Audi" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/volvo">
+                                        <img src="/Img/Get/50.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Volvo" title="Volvo" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/scania">
+                                        <img src="/Img/Get/51.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Scania" title="Scania" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/massey-ferguson">
+                                        <img src="/Img/Get/52.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Massey Ferguson" title="Massey Ferguson" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/lexus">
+                                        <img src="/Img/Get/53.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="Lexus" title="Lexus" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/Brand/john-deere">
+                                        <img src="/Img/Get/54.jpg?w=116&amp;h=76&amp;wm=False&amp;d=brands%2F" alt="John Deere" title="John Deere" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+    $('.brand-slider').slick({
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+        }]
+    });
+                        </script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="/LowBudget"><img class="img-responsive center-block" src="/Content/Images/low-budget.jpg" title="Low Budget" alt="Low Budget" /></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="/LowMileage"><img class="img-responsive center-block low-mileage" src="/Content/Images/low-mileage.jpg" title="Low Mileage" alt="Low Mileage" /></a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="heading-bar hidden-print">
+                    <span class="title">Subscribe for Newsletters</span>
+                </div>
+
+                <div class="block block-pad hidden-print">
+                    <div class="alert alert-success" id="NewsletterSubscribedSuccess" style="display:none;margin-bottom:0"><span class="glyphicon glyphicon-ok-sign"></span> You&#39;ve subscribed for newsletters. Thank you!</div>
+                    <form action="/Newsletters/Subscribe?Length=11" data-ajax="true" data-ajax-begin="$(&#39;#NewsletterSubscriptionForm .form-button&#39;).addClass(&#39;form-button-disabled&#39;).unbind(&#39;on&#39;);" data-ajax-complete="$(&#39;#NewsletterSubscriptionForm&#39;).fadeOut(function () { $(this).resetForm(); $(&#39;#NewsletterSubscribedSuccess&#39;).fadeIn() });" data-ajax-loading="#NewslettersFormLoader" id="NewsletterSubscriptionForm" method="post">
+                        <div class="row" style="margin-bottom:0">
+                            <div class="col-sm-3 text-right">
+                                <span class="text-muted" style="display:block;margin-top:7px">Enter your email</span>
+                            </div>
+                            <div class="col-sm-5">
+                                <input class="form-control" data-val="true" data-val-regex="Incorrect email address." data-val-regex-pattern="^[a-zA-Z0-9_\.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$" data-val-remote="&#39;Email&#39; is invalid." data-val-remote-additionalfields="*.Email" data-val-remote-type="POST" data-val-remote-url="/Newsletters/CheckSubscriberExist" data-val-required="required" id="Email" name="Email" placeholder="@email" type="text" value="" />
+                                <span class="field-validation-valid validator" data-valmsg-for="Email" data-valmsg-replace="true" style="display:block"></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="submit" class="form-button" value="Subscribe" />
+                                <span id="NewslettersFormLoader" class="text-muted" style="display:none"><em>Wait...</em></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrapper hidden-print">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <div class="footer-title">MAIN LINKS</div>
+                    <ul class="footer-list">
+                        <li><a href='/'>Home</a></li>
+                        <li><a href="/Testimonials">Testimonials</a></li>
+                        <li><a href="/Blog">Blog</a></li>
+                        <li><a href="/Inquiry">Inquiry</a></li>
+                        <li><a href="/ChassisCheck">Chassis Check</a></li>
+                        <li><a href="/Careers">Careers</a></li>
+
+                        <li><a href="/Promotions">Promotions</a></li>
+                    </ul>
+
+
+
+                    <div class="footer-title">Like us on facebook</div>
+                    <div class="fb-like" data-href="https://www.facebook.com/yuasatrading" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="footer-title">INFORMATION</div>
+                    <ul class="footer-list">
+                        <li><a href="/Topic/about-us">About Us</a></li>
+                        <li><a href="/Topic/corporate-profile">Corporate Profile</a></li>
+                        <li><a href="/Topic/terms-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="/Topic/shipping-terms">Shipping Terms</a></li>
+                        <li><a href="/Topic/used-car-buying-tips">Used Car Buying Tips</a></li>
+                        <li><a href="/Topic/dealer-tricks">Dealer Tricks</a></li>
+                        <li><a href="/Topic/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/Topic/contact-us">Contact Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="footer-title">REGIONAL SHOWROOMS</div>
+                    <ul class="footer-list">
+                        <li><a href="/jp" data-countryCode="jp"><span class="flag flag-jp"></span> Japan</a></li>
+                        <li><a href="/tz" data-countryCode="tz"><span class="flag flag-tz"></span> Tanzania</a></li>
+                        <li><a href="/ke" data-countryCode="ke"><span class="flag flag-ke"></span> Kenya</a></li>
+                        <li><a href="/ug" data-countryCode="ug"><span class="flag flag-ug"></span> Uganda</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="footer-title">CAREERS</div>
+                    <a href="/Careers"> <img src="/Content/Images/Career-Banner.jpg" alt="Career" /></a>
+
+                    <div class="footer-title">PAYMENT METHODS</div>
+                    <img src="/Content/Images/payment-options.png" alt="payment options" />
+
+
+                    <div class="footer-title">STAY CONNECTED</div>
+                    <ul class="socialSprite">
+                        <li><a href="http://www.facebook.com/yuasatrading" class="i-social-1" target="_blank" title="Facebook"></a></li>
+                        <li><a href="http://plus.google.com/" class="i-social-2" target="_blank" title="Google Plus"></a></li>
+                        <li><a href="http://www.linkedin.com" class="i-social-3" target="_blank" title="Linked In"></a></li>
+                        <li><a href="http://www.twitter.com/yuasatrading" class="i-social-4" target="_blank" title="Twitter"></a></li>
+                        <li><a href="https://pinterest.com/yuasatrading" class="i-social-5" target="_blank" title="Pinterest"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot-stamp-wrapper hidden-print">
+        <div class="container">
+            <div class="row" style="margin-bottom:0">
+                <div class="col-sm-12">
+                    <span class="glyphicon glyphicon-copyright-mark"></span> Copyrights 2018 <span class="client-name">Yuasa Trading</span>. All rights reserved.
+                    <div style="height:5px"></div>
+                    A website by <a href="http://www.webnomicstech.net" target="_blank"><span class="wt-logo"></span> Webnomics Technologies.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="compare-flyout" style="position:fixed;bottom:0px;right:10px;z-index:500" class="hidden-print">
+        <h2 id="toggle-comparelist" style="cursor:pointer;float:right;border-radius:5px 5px 0 0;"><span class="glyphicon glyphicon-stats"></span> Compare List (<span id="compare-list-count">0</span>/4) <span class="glyphicon glyphicon-chevron-up"></span></h2>
+        <div style="display:inline-block;margin-right:2px;float:right">
+            <script src="/LiveChat/CuteSoft_Client/CuteChat/Support-Image-Button.js.aspx"></script>
+
+        </div>
+        <div class="clearfix"></div>
+        <div id="comparelist-panel" style="background:#fff;display:none">
+            <div class="comparelist-wrapper" style="width:555px;background:url(/content/images/comparelist-bg.gif) no-repeat 128px center;border-top:1px solid #ddd;border-collapsed:collapsed">
+                <table class="table-striped table-condensed table-bordered table-text-sm" style="margin-bottom:0px;background:#fff">
+                    <tr>
+                        <td style="width:126px;height:86px"><strong>Make / Model</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>SKU</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Model Code / Year</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Color / Transmission</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mileage</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Engine / Fuel</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seats</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Location</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Extras</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Price</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Get Quote</strong></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding:5px;overflow:auto">
+                <button class="btn btn-default btn-xs pull-left" id="clearCompareList-btn"><span class="glyphicon glyphicon-remove"></span> Remove All</button>
+                <span class="pull-right">
+                    <button class="btn btn-default btn-xs" onclick="window.location='/Account/Login'"><span class="glyphicon glyphicon-log-in"></span> Login to Get Quotes</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="quoteRequestSent" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Quote Request Sent</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success"><span class="glyphicon glyphicon-ok-sign"></span> Your request for quoatation of these vehicles has been submitted. You will be informed shortly via email. Thank you!<br /><br />You can check your quotes status in <a href="/Account/Index/Myquotes" class="alert-link">My Quotes</a> section.</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $('#toggle-comparelist').click(function () {
+        if ($('#comparelist-panel').css('display') == 'none') {
+            showCompareFlyout();
+        }
+        else {
+            hideCompareFlyout()
+        }
+    });
+
+    var compareList = new Array();
+
+
+    $('.compare-add-item').click(function () {
+        if (compareList.length == 4) {
+            alert('Maximum 4 vehicles can be compared.');
+            return false;
+        }
+
+        var i = $(this).data("sku");
+        if ($.inArray(i, compareList) != -1) {
+            alert('This vehicle is already in compare list.');
+            return false;
+        }
+
+        $.post('/Compare/AddAjax/' + i, function (res) {
+            populateCompareFlyout(res);
+            compareList.push(i);
+        });
+
+        showCompareFlyout();
+        $('#compare-list-count').text(parseInt($('#compare-list-count').text()) + 1);
+    });
+
+    $('.comparelist-checkbox').live('click', function(){
+        if($(this).is(':checked'))
+        {
+            compareList.push($(this).data("sku"));
+        }
+        else
+        {
+            compareList.splice($.inArray($(this).data("sku"), compareList), 1);
+        }
+    });
+
+    $('#getQuotes-btn').click(function () {
+
+        if ($('#comparelist-panel #CountryId').val() == "") {
+            $('#comparelist-panel #CountryId').focus();
+            return false;
+        }
+
+        if(compareList.length <= 1)
+        {
+            alert('Please select more than one checkbox to request for a quotation.');
+            return false;
+        }
+
+        $.post('/Catalog/SubmitQuotes/?VehicleIds=' + compareList.join(",") + '&CountryId=' + $('#CountryId').val(), function () {
+            hideCompareFlyout();
+            $('#quoteRequestSent').modal('show');
+        });
+    });
+
+    $('.compare-remove-item').live('click', function () {
+        var i = $(this).data("sku");
+        $.post('/Compare/RemoveAjax/' + i, function () {
+            compareList.splice($.inArray(i, compareList), 1);
+            $('#comparelist-panel td[data-sku="' + i + '"]').remove();
+            $('#compare-list-count').text(compareList.length);
+
+            if(compareList.length == 0) hideCompareFlyout();
+        });
+    });
+
+    $('#clearCompareList-btn').on('click', function () {
+        $.post('/Compare/EmptyAjax', function () {
+            $('#comparelist-panel tr').each(function () {
+                $(this).find('td:gt(0)').fadeOut(function () { $(this).remove(); });
+            });
+            $('#compare-list-count').text('0');
+            hideCompareFlyout();
+            compareList.length = 0;
+        });
+    });
+
+    function showCompareFlyout() {
+        if ($('#compare-flyout').css('display') == 'none') {
+            $('#compare-flyout').show();
+        }
+        $('#comparelist-panel').animate({ height: 'show' }, 300, function () { $('#toggle-comparelist .glyphicon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down'); });
+    }
+
+    function hideCompareFlyout() {
+        $('#comparelist-panel').animate({ height: 'hide' }, 300, function () { $('#toggle-comparelist .glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up'); });
+    }
+
+    function populateCompareFlyout(p) {
+        var tmpTd = '<td data-sku="' + p.Sku + '" style="width:117px;vertical-align:top !important">';
+        tmpTd += '<a href="/Catalog/Details/ytc-' + p.VehicleSku + '">';
+        tmpTd += '<div class="relative">';
+        tmpTd += '<img class="img-thumbnail" width="96" height="60" src="/Img/Get/' + p.VehicleSku + '.jpg?w=96&h=60&sku=' + p.VehicleSku + '&isReserved=' + p.IsReserved + '&isSold=' + p.IsSold + '" title="' + p.Manufacturer + " " + p.Model + '" alt="' + p.Manufacturer + " " + p.Model + '">';
+        tmpTd += '</a>';
+        tmpTd += '<span class="btn btn-danger btn-xs compare-remove-item" title="Remove" data-sku="' + p.Sku + '"><span class="glyphicon glyphicon-remove"></span></span>';
+        tmpTd += '</div>';
+        tmpTd += '<div><a href="/Catalog/Details/ytc-' + p.VehicleSku + '">' + p.Manufacturer + ' / ' + p.Model + '</a></div>';
+        tmpTd += '</td>';
+        $('#comparelist-panel tr:eq(0)').append(tmpTd).fadeIn();
+
+        $('#comparelist-panel tr:eq(1)').append('<td data-sku="' + p.Sku + '">' + p.VehicleSku + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(2)').append('<td data-sku="' + p.Sku + '">' + p.ModelCode + ' | ' + p.Year + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(3)').append('<td data-sku="' + p.Sku + '">' + p.Color + ' | ' + p.Transmission + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(4)').append('<td data-sku="' + p.Sku + '">' + numberWithCommas(p.Mileage) + ' Km </td>').fadeIn();
+        $('#comparelist-panel tr:eq(5)').append('<td data-sku="' + p.Sku + '">' + p.EnginSize + ' Lt | ' + p.FuelType + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(6)').append('<td data-sku="' + p.Sku + '">' + p.Seats + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(7)').append('<td data-sku="' + p.Sku + '">' + p.ShowRoom + '</td>').fadeIn();
+
+        tmpTd = '<td data-sku="' + p.Sku + '">';
+        tmpTd += p.Extras;
+
+        if (p.IsLowMileage) {
+            tmpTd += '<br />';
+            tmpTd += '<span style="font-weight:bold;color:Red">Low Mileage</span>';
+        }
+        tmpTd += '</td>';
+        $('#comparelist-panel tr:eq(8)').append(tmpTd).fadeIn();
+
+        tmpTd = '<td data-sku="' + p.Sku + '">';
+        if(p.ShowPrice)
+        {
+            tmpTd += '<strong>' + p.PriceType + ': </strong>';
+            if(parseInt(p.OldPrice) > 0)
+            {
+                tmpTd += '<span class="text-st text-muted">' + numberWithCommas(p.OldPrice) + '</span><br />';
+            }
+            tmpTd += '<strong>US $ ' + numberWithCommas(p.Price) + '</strong>';
+        }
+        tmpTd += '</td>';
+        $('#comparelist-panel tr:eq(9)').append(tmpTd).fadeIn();
+
+        $('#comparelist-panel tr:eq(10)').append('<td data-sku="' + p.Sku + '" class="text-center"><input type="checkbox" data-sku="' + p.Sku + '" class="comparelist-checkbox" checked="checked" /></td>').fadeIn();
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    </script>
+
+
+
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48296649-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿@using YuasTrading.Models
+@model LoginViewModel
+@if (User.Identity.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <ul class="header-menu">
+            <li style="font-size:13px">Welcome, @(((System.Security.Claims.ClaimsIdentity)User.Identity).FindFirst("FirstName").Value + " " + ((System.Security.Claims.ClaimsIdentity)User.Identity).FindFirst("LastName").Value)</li>
+            <li><a href="https://yuasatrading.com/Account/Index"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <ul class="header-menu">
+                <li><a href="/Account/Register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="anchor-wrapper" href="#"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret caret-white"></span></a>
+                    <div class="dropdown-menu pull-right" role="menu" style="padding:5px;width:280px;color:#333">
+                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="padding:5px;">@Html.TextBox("Email", "", new { @type = "email", placeholder = "enter your email" })</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:5px;">@Html.Password("Password")</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:5px;">
+                                        <div class="pull-left">
+                                            @Html.CheckBox("Remember me") @Html.Label("Remember me")
+                                        </div>
+                                        <div class="pull-right">
+                                            <input type="submit" class="form-button" value="Sign in" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:5px;"><a href="/Account/Register" style="color:#b10000">New members start here</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:5px;"><a href="/Account/Recovery" style="color:#b10000">Forgot password?</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center; padding:5px;">
+                                        <div style="margin:0 auto 15px auto;position:relative;width:100%">
+                                            <div style="height:11px;border-bottom:1px solid #dfdfdf"></div>
+                                            <span style="top:0;left:43%;position:absolute;background:#fff;padding:0 11px;">OR</span>
+                                        </div>
+
+                                        <a href="/Account/FacebookLogin" title="Login with Facebook">
+                                            <img src="/Content/Images/facebook-login.png" alt="facebook login" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        }
+                    </div>
+                    <script>
+                        $('.dropdown-menu input').keydown(function (e) {
+                            e.stopPropagation();
+                        });
+                    </script>
+                </li>
+            </ul>
+        </div>
+    </div>
+}

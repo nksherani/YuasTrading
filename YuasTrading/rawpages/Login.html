@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://yuasatrading.com/Account/Login -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    
+    <link rel="apple-touch-icon" href="https://yuasatrading.com/favico.png">
+    <script async="" src="./Login_files/analytics.js.download"></script><script id="facebook-jssdk" src="./Login_files/sdk.js.download"></script><script>
+    if (window.self != window.top) parent.window.location = window.location.pathname;
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link href="./Login_files/bootstrap.min.css" rel="stylesheet">
+<link href="./Login_files/styles.css" rel="stylesheet">
+<script src="./Login_files/jquery-1.8.3.min.js.download"></script>
+
+<link rel="stylesheet" type="text/css" href="./Login_files/jquery.fancybox.css" media="screen">
+<script type="text/javascript" src="./Login_files/jquery.fancybox.pack.js.download"></script>
+
+<script src="./Login_files/jquery.validate.min.js.download"></script>
+<script src="./Login_files/jquery.validate.unobtrusive.min.js.download"></script>
+<script src="./Login_files/jquery.unobtrusive-ajax.min.js.download"></script>
+
+<script src="./Login_files/bootstrap.min.js.download"></script>
+<link href="./Login_files/flags.css" rel="stylesheet">
+
+<link href="./Login_files/slick.css" rel="stylesheet">
+<script type="text/javascript" src="./Login_files/jquery-migrate-1.2.1.min.js.download"></script>
+<script src="./Login_files/slick.min.js.download"></script>
+
+<script src="./Login_files/responsiveCarousel.min.js.download"></script>
+
+<script src="./Login_files/jcarousellite_1.0.1.pack.js.download"></script>
+
+
+<script src="./Login_files/jquery.mousewheel.js.download"></script>
+<script src="./Login_files/ilightbox.js.download"></script>
+
+<style type="text/css">
+    @media screen and (max-width: 991px) {
+      .selection-wrapper {
+        display:block;
+        border-radius:6px;
+        float:none;
+      }
+      .low-mileage {
+        margin-top:15px;
+      }
+    }
+</style>
+<script>
+    var captchaIsValid = false;
+
+    $(document).ready(function () {
+        $('.top-menu a[href="' + window.location.pathname + '"]').addClass("active");
+
+        $('form[data-captcha="true"]').on('submit', function (e) {
+            var elm = $(this);
+            if (captchaIsValid == false && elm.valid()) {
+                e.preventDefault();
+                elm.find('.captcha-validator').hide();
+                if (Recaptcha.get_response().length > 0) {
+                    $.post('/Recaptcha/Validate', { challenge: Recaptcha.get_challenge(), response: Recaptcha.get_response() }, function (data) {
+                        if (data) {
+                            captchaIsValid = true;
+                            elm.submit();
+                        }
+                        else {
+                            Recaptcha.reload();
+                            elm.find('.captcha-validator').show();
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+    $.fn.resetForm = function () {
+        this.find('select').each(function () { $(this).prop('selectedIndex', 0);; });
+        this.find('input[type=text], input[type=password], input[type=hidden], textarea').each(function () { $(this).val(''); });
+        this.find('input:checked').each(function () { $(this).removeAttr('checked'); });
+    };
+</script>
+
+    
+<style type="text/css">.fancybox-margin{margin-right:17px;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_customer_chat_bounce_in{animation-duration:250ms;animation-name:fb_bounce_in}.fb_customer_chat_bounce_out{animation-duration:250ms;animation-name:fb_fade_out}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_fade_out{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_in{0%{opacity:0;transform:scale(.8, .8);transform-origin:100% 100%}10%{opacity:.1}20%{opacity:.2}30%{opacity:.3}40%{opacity:.4}50%{opacity:.5}60%{opacity:.6}70%{opacity:.7}80%{opacity:.8;transform:scale(1.03, 1.03)}90{opacity:.9}100%{opacity:1;transform:scale(1, 1)}}</style></head>
+<body>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Login_files/Ms1VZf1Vg1J.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1586531728290446";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>    
+
+    <div class="header-wrapper hidden-print">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4 col-md-4">
+                <div class="row" style="max-height:69px;overflow:hidden">
+                    <div class="col-sm-12 col-lg-11 col-md-11" style="padding-top:20px;">
+                        
+                        <a href="https://yuasatrading.com/">
+                            <img src="./Login_files/logo.png" alt="Yuasa Trading" style="margin-top:5px;max-width:318px;width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-offset-1 col-lg-offset-1 text-right">
+                        
+                    </div>
+                </div>
+                <script src="./Login_files/Support-Visitor-monitor.js.aspx"></script><div id="invitechatwindow" style="Z-INDEX: 99999;position:absolute;visibility:hidden;left:0px;top:0px;"><a href="javascript:acceptchatwindow();"><img src="./Login_files/live-help-window.gif" border="0"></a><div style="margin-top:0px;margin-left:50px"><a href="javascript:closechatwindow();"><img src="./Login_files/closechat.gif" border="0"></a></div></div>
+            </div>
+            <div class="col-md-3 col-lg-3" style="text-align:center;">
+                <div style="color: #999; font-size: 20px;">Current Stock: </div>
+            </div>
+            <div class="col-md-5 col-lg-5 ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="selection-wrapper">
+                            <div class="dropdown" id="langDDL" style="color:white !important ">
+                                <a data-toggle="dropdown" class="anchor-wrapper" href="javascript:void(0)"><img src="./Login_files/language.png" alt="language image" style="width:16px;height:16px;vertical-align:middle"> English <span class="caret caret-white"></span></a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="https://yuasatrading.com/Home/Lang/en?ReturnUrl=%2FAccount%2FLogin">English</a></li>
+                                    <li><a href="https://yuasatrading.com/Home/Lang/fr?ReturnUrl=%2FAccount%2FLogin">French</a></li>
+                                    <li><a href="https://yuasatrading.com/Home/Lang/ja?ReturnUrl=%2FAccount%2FLogin">Japanese</a></li>
+                                    <li><a href="https://yuasatrading.com/Home/Lang/pt?ReturnUrl=%2FAccount%2FLogin">Portuguese</a></li>
+                                    <li><a href="https://yuasatrading.com/Home/Lang/ru?ReturnUrl=%2FAccount%2FLogin">Russian</a></li>
+                                    
+                                    
+                                </ul>
+                                <script>
+                                    function getCookie(cname) {
+                                        var name = cname + "=";
+                                        var ca = document.cookie.split(';');
+                                        for (var i = 0; i < ca.length; i++) {
+                                            var c = ca[i];
+                                            while (c.charAt(0) == ' ') c = c.substring(1);
+                                            if (c.indexOf(name) != -1) {
+                                                return c.substring(name.length, c.length);
+                                            }
+                                        }
+                                        return "";
+                                    }
+                                    if (getCookie("AppLang") != null) {
+                                        var appLang = getCookie("AppLang");
+                                        if (appLang != "en") {
+                                            LangCaption = "";
+                                            switch (appLang)
+                                            {
+                                                case "fr":
+                                                    LangCaption = 'French';
+                                                    break;
+                                                case "ja":
+                                                    LangCaption = 'Japanese';
+                                                    break;
+                                                case "ur":
+                                                    LangCaption = 'Urdu';
+                                                    break;
+                                                case "pt":
+                                                    LangCaption = 'Portuguese';
+                                                    break;
+                                                case "ru":
+                                                    LangCaption = 'Russian';
+                                                    break;
+                                                default:
+                                                    LangCaption = 'English';
+                                            }
+                                            $('#langDDL > a').html('<img src="/content/images/language.png" alt="language image" style="width:16px;height:16px;vertical-align:middle" /> ' + LangCaption + ' <span class="caret caret-white"></span>');
+                                        }
+                                    }
+                                </script>
+                                
+                            </div>
+
+                            <div class="dropdown">
+                                <a data-toggle="dropdown" class="anchor-wrapper" href="https://yuasatrading.com/Account/Login#"><img src="./Login_files/skype.png" alt="skype" style="width:16px;height:16px;vertical-align:middle"> Skype Call <span class="caret caret-white"></span></a>
+<ul class="dropdown-menu" role="menu">
+        <li>
+            <a href="skype:Yuasa_sales.Tz?call" title="offline">
+                <span class="skype-i i-offline"></span>
+
+                <strong>Tanzania Sales</strong>
+                <span class="text-muted text-sm"> • <em>English, Swahili </em></span>
+            </a>
+        </li>
+        <li>
+            <a href="skype:Yuasa_sales.Ke?call" title="offline">
+                <span class="skype-i i-offline"></span>
+
+                <strong>Kenya Sales</strong>
+                <span class="text-muted text-sm"> • <em>English, Swahili</em></span>
+            </a>
+        </li>
+</ul>
+                            </div>
+                            <div class="dropdown" id="showroomsDDL">
+                                <a data-toggle="dropdown" class="anchor-wrapper" href="https://yuasatrading.com/Account/Login#"><span class="glyphicon glyphicon-globe"></span> Global <span class="caret caret-white"></span></a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="https://yuasatrading.com/"><span class="glyphicon glyphicon-globe"></span> Global</a></li>
+    <li><a href="https://yuasatrading.com/jp" data-countrycode="jp"><span class="flag flag-jp"></span> Japan</a></li>
+    <li><a href="https://yuasatrading.com/tz" data-countrycode="tz"><span class="flag flag-tz"></span> Tanzania</a></li>
+    <li><a href="https://yuasatrading.com/ke" data-countrycode="ke"><span class="flag flag-ke"></span> Kenya</a></li>
+    <li><a href="https://yuasatrading.com/ug" data-countrycode="ug"><span class="flag flag-ug"></span> Uganda</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                                 $('#showroomsDDL > a').html('<span class="glyphicon glyphicon-globe"></span> Global' + ' <span class="caret caret-white"></span>');
+                        </script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <ul class="header-menu">
+                                <li><a href="https://yuasatrading.com/Account/Register"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="https://yuasatrading.com/Account/Login#"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret caret-white"></span></a>
+                                    <div class="dropdown-menu pull-right" role="menu" style="padding:5px;width:280px;color:#333">
+                                        <form action="https://yuasatrading.com/Account/Login?ReturnUrl=/Account/Login" method="post" novalidate="novalidate">
+                                            <table style="width:100%;">
+                                                <tbody><tr>
+                                                    <td style="padding:5px;"><input class="form-control" data-val="true" data-val-required="The Email field is required." id="EmailId" name="Email" placeholder="enter your email" type="email" value=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;"><input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="enter your password" type="password"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;">
+                                                        <div class="pull-left">
+                                                            <input data-val="true" data-val-required="The Remember me field is required." id="Remember" name="Remember" type="checkbox" value="true"><input name="Remember" type="hidden" value="false"> <label for="Remember">Remember me</label>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <input type="submit" class="form-button" value="Sign in">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;"><a href="https://yuasatrading.com/Account/Register" style="color:#b10000">New members start here</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px;"><a href="https://yuasatrading.com/Account/Recovery" style="color:#b10000">Forgot password?</a></td>
+                                                </tr>
+                                                    <tr>
+                                                        <td style="text-align:center; padding:5px;">
+                                                            <div style="margin:0 auto 15px auto;position:relative;width:100%">
+                                                                <div style="height:11px;border-bottom:1px solid #dfdfdf"></div>
+                                                                <span style="top:0;left:43%;position:absolute;background:#fff;padding:0 11px;">OR</span>
+                                                            </div>
+
+                                                            <a href="https://yuasatrading.com/Account/FacebookLogin" title="Login with Facebook">
+                                                                <img src="./Login_files/facebook-login.png" alt="facebook login">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                            </tbody></table>
+                                        </form>
+                                    </div>
+                                    <script>
+                                        $('.dropdown-menu input').keydown(function (e) {
+                                            e.stopPropagation();
+                                        });
+                                    </script>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div itemscope="" itemtype="http://schema.org/Organization" style="display:none">
+    <a itemprop="url" href="https://yuasatrading.com/">
+        <div itemprop="name"><strong>Yuasa Trading Co,</strong></div>
+    </a>
+    <div itemprop="description">YUASA TRADING leading car exporter of preowned cars directly from Japan, To Tanzania (Yuasa Auto Impex), Kenya (Yuasa Motors), Uganda (Yuasa Investments)</div>
+    <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">New Bagamoyo Rd, Opp Gapco Victoria Fuel Stand,</span><br>
+        P.O. Box: <span itemprop="postOfficeBoxNumber">P.O. Box 3091</span><br>
+        <span itemprop="addressLocality">Dar-es-salaam</span><br>
+        <span itemprop="addressRegion">Dar es Salaam</span><br>
+        <span itemprop="addressCountry">Tanzania</span><br>
+    </div>
+</div>
+
+<div class="menu-wrapper hidden-print">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav top-menu">
+                <li><a href="https://yuasatrading.com/">HOME</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="anchor-wrapper" href="https://yuasatrading.com/Account/Login#">ADVANCE ORDERS <span class="caret caret-white"></span></a>
+                    <ul class="dropdown-menu" id="advanceOrderDDL" role="menu" style="background-color: white; margin-top: -1px; width: 100%;">
+                        <li><a href="https://yuasatrading.com/Catalog/AdvanceOrder">Place Advance Order</a></li>
+                        <li><a href="https://yuasatrading.com/Catalog/TrackOrder">Track Order</a></li>
+                    </ul>
+                </li>
+                    <li><a href="https://yuasatrading.com/Catalog/Search">SEARCH</a></li>
+                <li><a href="https://yuasatrading.com/Blog">BLOG</a></li>
+                
+                <li><a href="https://yuasatrading.com/Inquiry">INQUIRY</a></li>
+                <li><a href="https://yuasatrading.com/Promotions">PROMOTIONS</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-md" style="padding-left:16px;">
+                <li><span class="yticon yticon-email"></span> Email: info@yuasatrading.com</li>
+                <li><span class="yticon yticon-phone"></span> Phone: (+81) 480-726955</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-3 hidden-print">
+
+           <style type="text/css" scoped="">
+               .tooltip-inner {
+                   max-width: 250px !important;
+               }
+           </style>
+<div class="search-block clearfix">
+    <div class="title">SEARCH</div>
+<form action="https://yuasatrading.com/Catalog/Search" id="searchBlock" method="get" novalidate="novalidate"><select class="form-control input-sm" id="ManufacturerId" name="ManufacturerId"><option value="">Select Make</option>
+<option value="49">Audi</option>
+<option value="44">BMW</option>
+<option value="46">Chrysler</option>
+<option value="40">Daihatsu</option>
+<option value="48">Ford</option>
+<option value="41">Hino</option>
+<option value="38">Honda</option>
+<option value="37">Isuzu</option>
+<option value="54">John Deere</option>
+<option value="45">Land Rover</option>
+<option value="53">Lexus</option>
+<option value="52">Massey Ferguson</option>
+<option value="42">Mazda</option>
+<option value="43">Mercedes Benz</option>
+<option value="36">Mitsubishi</option>
+<option value="34">Nissan</option>
+<option value="51">Scania</option>
+<option value="39">Subaru</option>
+<option value="35">Suzuki</option>
+<option value="33">Toyota</option>
+<option value="47">Volks Wagon</option>
+<option value="50">Volvo</option>
+</select>        <select name="ModelId" id="ModelId" class="form-control input-sm"><option value="">Select Model</option></select>
+<select class="form-control input-sm" id="Year" name="Year"><option value="">Select Year</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+<option value="1972">1972</option>
+<option value="1971">1971</option>
+<option value="1970">1970</option>
+<option value="1969">1969</option>
+<option value="1968">1968</option>
+<option value="1967">1967</option>
+<option value="1966">1966</option>
+<option value="1965">1965</option>
+<option value="1964">1964</option>
+<option value="1963">1963</option>
+<option value="1962">1962</option>
+<option value="1961">1961</option>
+<option value="1960">1960</option>
+</select>        <div class="control-help">
+            <input class="form-control input-sm" id="Keywords" name="Keywords" placeholder="Search Keyword" type="text" value="">
+            <span class="glyphicon glyphicon-question-sign help-icon" data-container="body" style="text-align:right;" data-html="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="SKU, Make, Model, Make +Model, Model Code, Year, Make + Year, Model + Year, Color, Make + Color, Model + Color, Fuel, Make +Fuel, Model + Fuel, Office file # &lt;br&gt; ----------------------------------------------- &lt;br&gt; Any of above mentioned search terms may be used. Each search term or combination is seperated by comas, only one search term can be used at one time."></span>
+        </div>
+        <input type="submit" class="form-button pull-left" value="Search" style="padding:7px 9px">
+</form>    <a href="https://yuasatrading.com/Catalog/Search">Advanced Search</a>
+
+    <div class="alert alert-danger search-validation" style="display:none">
+        <span class="close" onclick="$(this).parent().fadeOut(100)">×</span>
+        <span class="glyphicon glyphicon-remove-sign"></span> Please select Make or Model or enter SKU No# to start searching for used cars.
+    </div>
+</div>
+<script>
+    $(function () {
+        $('.help-icon').tooltip();
+        //$('.tooltiplink').tooltip();
+        $('#searchBlock #ManufacturerId').on('change', function () {
+            $("#searchBlock #ModelId").empty().append('<option value="">Select Model</option>');
+            $.post("/Helper/GetModelsInStock/" + $('#searchBlock #ManufacturerId').val(), function (data) {
+                //alert(data);
+                $(data).each(function () {
+                    $("#searchBlock #ModelId").append($("<option></option>").val(this.Value).html(this.Text));
+                });
+
+            });
+        });
+
+
+        $('#searchBlock').on('submit', function (e) {
+            if ($('#searchBlock #ManufacturerId').val() + $('#searchBlock #ModelId').val() + $('#searchBlock #Year').val() + $('#searchBlock #Keywords').val() == "") {
+                e.preventDefault();
+                $('.search-validation').fadeIn(100);
+            }
+        });
+    });
+</script>                    <div style="height:20px"></div>
+    
+                    <div class="heading-bar">
+                        <span class="title">Like us on Faceook</span>
+                    </div>
+                    <div class="block block-pad">
+                        <div class="clearfix" style="text-align:center;">
+                            <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/yuasatrading" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=1586531728290446&amp;container_width=227&amp;href=https%3A%2F%2Fwww.facebook.com%2Fyuasatrading&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 75px; height: 20px;"><iframe name="f1da199c3dff70c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Login_files/like.html" style="border: none; visibility: visible; width: 75px; height: 20px;" class=""></iframe></span></div>
+                        </div>
+                    </div>
+
+    <div class="heading-bar">
+        <span class="title">SPECIAL OFFERS</span>
+        <a href="https://yuasatrading.com/SpecialOffers" class="button">View All</a>
+    </div>
+    <div class="block">
+        <ul class="block-list clearfix">
+                <li class="clearfix" style="padding-top:5px;padding-bottom:5px">
+                    <a href="https://yuasatrading.com/Catalog/Details/ytc-3253">
+                        <img class="img-responsive img-thumbnail center-block" src="./Login_files/3253.jpg" title="Toyota Land Cruiser Wagon" alt="Toyota Land Cruiser Wagon">
+                    </a>
+                    <div class="clearfix" style="margin:3px 0">
+                        <a href="https://yuasatrading.com/Catalog/Details/ytc-3253">
+                            <strong>
+                                <span class="pull-left">Land Cruiser Wagon</span>
+                                <span class="pull-right">2016</span>
+                            </strong>
+                        </a>
+                    </div>
+                        <div class="clearfix">
+                            <span class="pull-left"><strong>FOB:</strong> <span class="text-st text-muted ">130,000</span></span>
+                            <span class="pull-right">127,600 US $</span>
+                        </div>
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <div class="text-muted" style="margin-top:3px;font-size:11px;font-style:italic">
+                                <span class="flag flag-ug"></span>
+                                Uganda
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                                <span class="glyphicon glyphicon-gift help-icon" style="color:#468847;cursor:pointer" data-toggle="tooltip" data-placement="top" title="" data-original-title="SPECIAL OFFER: Fully Serviced, Full Tank Fuel"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="clearfix" style="padding-top:5px;padding-bottom:5px">
+                    <a href="https://yuasatrading.com/Catalog/Details/ytc-3234">
+                        <img class="img-responsive img-thumbnail center-block" src="./Login_files/3234.jpg" title="Nissan Civilian" alt="Nissan Civilian">
+                    </a>
+                    <div class="clearfix" style="margin:3px 0">
+                        <a href="https://yuasatrading.com/Catalog/Details/ytc-3234">
+                            <strong>
+                                <span class="pull-left">Civilian</span>
+                                <span class="pull-right">1998</span>
+                            </strong>
+                        </a>
+                    </div>
+                        <div class="clearfix">
+                            <span class="pull-left"><strong>DDP:</strong> <span class="text-st text-muted ">23,000</span></span>
+                            <span class="pull-right">21,000 US $</span>
+                        </div>
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <div class="text-muted" style="margin-top:3px;font-size:11px;font-style:italic">
+                                <span class="flag flag-tz"></span>
+                                Tanzania
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                        </div>
+                    </div>
+                </li>
+                <li class="clearfix" style="padding-top:5px;padding-bottom:5px">
+                    <a href="https://yuasatrading.com/Catalog/Details/ytc-3124">
+                        <img class="img-responsive img-thumbnail center-block" src="./Login_files/3124.jpg" title="Chrysler Jeep Cherokee" alt="Chrysler Jeep Cherokee">
+                    </a>
+                    <div class="clearfix" style="margin:3px 0">
+                        <a href="https://yuasatrading.com/Catalog/Details/ytc-3124">
+                            <strong>
+                                <span class="pull-left">Jeep Cherokee</span>
+                                <span class="pull-right">2005</span>
+                            </strong>
+                        </a>
+                    </div>
+                        <div class="clearfix">
+                            <span class="pull-left"><strong>DDP:</strong> <span class="text-st text-muted ">19,400</span></span>
+                            <span class="pull-right">13,800 US $</span>
+                        </div>
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <div class="text-muted" style="margin-top:3px;font-size:11px;font-style:italic">
+                                <span class="flag flag-tz"></span>
+                                Tanzania
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                        </div>
+                    </div>
+                </li>
+        </ul>
+    </div>
+
+<div class="heading-bar">
+    <span class="title">SEARCH BY TYPE</span>
+</div>
+
+<div class="block">
+    <ul class="vtype-list clearfix">
+            <li><a href="https://yuasatrading.com/Type/Sedan" class="sedan"><span></span><br>Sedan</a></li>
+            <li><a href="https://yuasatrading.com/Type/Hatchback" class="hatchback"><span></span><br>Hatchback</a></li>
+            <li><a href="https://yuasatrading.com/Type/Sport" class="sport"><span></span><br>Sport</a></li>
+            <li><a href="https://yuasatrading.com/Type/SUV_or_4WD" class="suv_or_4wd"><span></span><br>SUV or 4WD</a></li>
+            <li><a href="https://yuasatrading.com/Type/Wagon" class="wagon"><span></span><br>Wagon</a></li>
+            <li><a href="https://yuasatrading.com/Type/Van" class="van"><span></span><br>Van</a></li>
+            <li><a href="https://yuasatrading.com/Type/Mini_Bus" class="mini_bus"><span></span><br>Mini Bus</a></li>
+            <li><a href="https://yuasatrading.com/Type/Bus" class="bus"><span></span><br>Bus</a></li>
+            <li><a href="https://yuasatrading.com/Type/Truck" class="truck"><span></span><br>Truck</a></li>
+            <li><a href="https://yuasatrading.com/Type/Machinery" class="machinery"><span></span><br>Machinery</a></li>
+    </ul>
+</div>
+
+
+    <div class="heading-bar">
+        <span class="title">Recent Posts</span>
+        <a class="button" href="https://yuasatrading.com/Blog">View All</a>
+    </div>
+    <div class="block">
+        <ul class="block-list blog-list">
+                <li>
+                    <a href="https://yuasatrading.com/Blog/Post/auto-window-roll-down-stopped-working"><strong>Auto window roll down stopped working</strong></a>
+                    <br>
+                    In Japanese Cars auto window roll down feature stopped working, How to fix it with out going to garage and paying unnecessary costs.
+                    <div class="clearfix readm">
+                        <div class="pull-left text-muted" style="margin:3px 0;font-size:11px;font-style:italic">
+                            Mar 18, 2015 06:30 PM
+                        </div>
+                        <a class="pull-right" style="font-size:12px;" href="https://yuasatrading.com/Blog/Post/auto-window-roll-down-stopped-working">Read More <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
+                </li>
+        </ul>
+    </div>
+
+
+                
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                
+
+<h2>Login</h2>
+
+<div class="block block-content">
+    <div style="display:table;width:100%">
+        <div style="width:50%;display:table-cell;padding:10px">
+<form action="https://yuasatrading.com/Account/Login" method="post" novalidate="novalidate">                <table style="margin:0 auto">
+                    <tbody><tr>
+                        <td><label class="control-label" for="Email">Email</label></td>
+                        <td><input class="form-control" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" style="width:210px" type="email" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label class="control-label" for="Password">Password</label></td>
+                        <td><input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" style="width:210px" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input data-val="true" data-val-required="The Remember me field is required." id="Remember" name="Remember" type="checkbox" value="true"><input name="Remember" type="hidden" value="false"> <label for="Remember">Remember me</label></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td style="text-align:center">
+                            <input type="submit" class="form-button" value="Submit">
+                        </td>
+                    </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center">
+                                <div style="margin:20px auto;position:relative;width:100%">
+                                    <div style="height:11px;border-bottom:1px solid #dfdfdf"></div>
+                                    <span style="top:0;left:45%;position:absolute;background:#fff;padding:0 11px;">OR</span>
+                                </div>
+
+                                <a href="https://yuasatrading.com/Account/FacebookLogin" title="Login with Facebook">
+                                    <img src="./Login_files/facebook-login.png">
+                                </a>
+                            </td>
+                        </tr>
+                </tbody></table>
+</form>        </div>
+
+        <div style="width:50%;display:table-cell;padding:10px;border-left:1px solid #dfdfdf;line-height:20px">
+            <ul>
+                <li>I need to setup a <a href="https://yuasatrading.com/Account/Register">new account</a>.</li>
+                <li>Help me <a href="https://yuasatrading.com/Account/Recovery">retrieve my password</a>.</li>
+            </ul>
+            <strong>Profile</strong><br>
+            Create a profile to use for all upcoming purchases. It's a safe, easy way to store payment information and product preferences. Login now to set up your profile!
+        </div>
+    </div>
+</div>
+             
+                
+                   <div class="row" style="margin-bottom:0">
+                    <div class="col-sm-12 clearfix">
+<div class="heading-bar hidden-print">
+    <span class="title">BROWSE BY BRAND</span>
+    
+</div>
+<div class="block hidden-print">
+    <div class="brand-slider slick-initialized slick-slider">
+            <div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 4320px; transform: translate3d(-840px, 0px, 0px);"><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/ford">
+                    <img src="./Login_files/48.jpg" alt="Ford" title="Ford">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/audi">
+                    <img src="./Login_files/49.jpg" alt="Audi" title="Audi">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/volvo">
+                    <img src="./Login_files/50.jpg" alt="Volvo" title="Volvo">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/scania">
+                    <img src="./Login_files/51.jpg" alt="Scania" title="Scania">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/massey-ferguson">
+                    <img src="./Login_files/52.jpg" alt="Massey Ferguson" title="Massey Ferguson">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/lexus">
+                    <img src="./Login_files/53.jpg" alt="Lexus" title="Lexus">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/john-deere">
+                    <img src="./Login_files/54.jpg" alt="John Deere" title="John Deere">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/toyota">
+                    <img src="./Login_files/33.jpg" alt="Toyota" title="Toyota">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/nissan">
+                    <img src="./Login_files/34.jpg" alt="Nissan" title="Nissan">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/suzuki">
+                    <img src="./Login_files/35.jpg" alt="Suzuki" title="Suzuki">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/mitsubishi">
+                    <img src="./Login_files/36.jpg" alt="Mitsubishi" title="Mitsubishi">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/isuzu">
+                    <img src="./Login_files/37.jpg" alt="Isuzu" title="Isuzu">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/honda">
+                    <img src="./Login_files/38.jpg" alt="Honda" title="Honda">
+                </a>
+            </div><div class="slick-slide slick-active" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/subaru">
+                    <img src="./Login_files/39.jpg" alt="Subaru" title="Subaru">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/daihatsu">
+                    <img src="./Login_files/40.jpg" alt="Daihatsu" title="Daihatsu">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/hino">
+                    <img src="./Login_files/41.jpg" alt="Hino" title="Hino">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/mazda">
+                    <img src="./Login_files/42.jpg" alt="Mazda" title="Mazda">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/mercedes-benz">
+                    <img src="./Login_files/43.jpg" alt="Mercedes Benz" title="Mercedes Benz">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/bmw">
+                    <img src="./Login_files/44.jpg" alt="BMW" title="BMW">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/land-rover">
+                    <img src="./Login_files/45.jpg" alt="Land Rover" title="Land Rover">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/chrysler">
+                    <img src="./Login_files/46.jpg" alt="Chrysler" title="Chrysler">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/volks-wagon">
+                    <img src="./Login_files/47.jpg" alt="Volks Wagon" title="Volks Wagon">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/ford">
+                    <img src="./Login_files/48.jpg" alt="Ford" title="Ford">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/audi">
+                    <img src="./Login_files/49.jpg" alt="Audi" title="Audi">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/volvo">
+                    <img src="./Login_files/50.jpg" alt="Volvo" title="Volvo">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/scania">
+                    <img src="./Login_files/51.jpg" alt="Scania" title="Scania">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/massey-ferguson">
+                    <img src="./Login_files/52.jpg" alt="Massey Ferguson" title="Massey Ferguson">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/lexus">
+                    <img src="./Login_files/53.jpg" alt="Lexus" title="Lexus">
+                </a>
+            </div><div class="slick-slide" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/john-deere">
+                    <img src="./Login_files/54.jpg" alt="John Deere" title="John Deere">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/toyota">
+                    <img src="./Login_files/33.jpg" alt="Toyota" title="Toyota">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/nissan">
+                    <img src="./Login_files/34.jpg" alt="Nissan" title="Nissan">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/suzuki">
+                    <img src="./Login_files/35.jpg" alt="Suzuki" title="Suzuki">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/mitsubishi">
+                    <img src="./Login_files/36.jpg" alt="Mitsubishi" title="Mitsubishi">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/isuzu">
+                    <img src="./Login_files/37.jpg" alt="Isuzu" title="Isuzu">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/honda">
+                    <img src="./Login_files/38.jpg" alt="Honda" title="Honda">
+                </a>
+            </div><div class="slick-slide slick-cloned" style="width: 120px;">
+                <a href="https://yuasatrading.com/Brand/subaru">
+                    <img src="./Login_files/39.jpg" alt="Subaru" title="Subaru">
+                </a>
+            </div></div></div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    <button type="button" class="slick-prev" style="display: block;">Previous</button><button type="button" class="slick-next" style="display: block;">Next</button></div>
+</div>
+<script>
+    $('.brand-slider').slick({
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+        }]
+    });
+</script>
+                    </div>
+                    </div>   
+                
+                
+
+
+<div class="heading-bar hidden-print">
+    <span class="title">Subscribe for Newsletters</span>
+</div>
+
+<div class="block block-pad hidden-print">
+    <div class="alert alert-success" id="NewsletterSubscribedSuccess" style="display:none;margin-bottom:0"><span class="glyphicon glyphicon-ok-sign"></span> You've subscribed for newsletters. Thank you!</div>
+<form action="https://yuasatrading.com/Newsletters/Subscribe?Length=11" data-ajax="true" data-ajax-begin="$(&#39;#NewsletterSubscriptionForm .form-button&#39;).addClass(&#39;form-button-disabled&#39;).unbind(&#39;on&#39;);" data-ajax-complete="$(&#39;#NewsletterSubscriptionForm&#39;).fadeOut(function () { $(this).resetForm(); $(&#39;#NewsletterSubscribedSuccess&#39;).fadeIn() });" data-ajax-loading="#NewslettersFormLoader" id="NewsletterSubscriptionForm" method="post" novalidate="novalidate">        <div class="row" style="margin-bottom:0">
+            <div class="col-sm-3 text-right">
+                <span class="text-muted" style="display:block;margin-top:7px">Enter your email</span>
+            </div>
+            <div class="col-sm-5">
+                <input class="form-control" data-val="true" data-val-regex="Incorrect email address." data-val-regex-pattern="^[a-zA-Z0-9_\.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$" data-val-remote="&#39;Email&#39; is invalid." data-val-remote-additionalfields="*.Email" data-val-remote-type="POST" data-val-remote-url="/Newsletters/CheckSubscriberExist" data-val-required="required" id="Email" name="Email" placeholder="@email" type="text" value="">
+                <span class="field-validation-valid validator" data-valmsg-for="Email" data-valmsg-replace="true" style="display:block"></span>
+            </div>
+            <div class="col-sm-4">
+                <input type="submit" class="form-button" value="Subscribe">
+                <span id="NewslettersFormLoader" class="text-muted" style="display:none"><em>Wait...</em></span>
+            </div>
+        </div>
+</form></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrapper hidden-print">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <div class="footer-title">MAIN LINKS</div>
+                <ul class="footer-list">
+                    <li><a href="https://yuasatrading.com/">Home</a></li>
+                    <li><a href="https://yuasatrading.com/Testimonials">Testimonials</a></li>
+                    <li><a href="https://yuasatrading.com/Blog">Blog</a></li>
+                    <li><a href="https://yuasatrading.com/Inquiry">Inquiry</a></li>
+                    <li><a href="https://yuasatrading.com/ChassisCheck">Chassis Check</a></li>
+                    <li><a href="https://yuasatrading.com/Careers">Careers</a></li>
+                    
+                    <li><a href="https://yuasatrading.com/Promotions">Promotions</a></li>
+                </ul>
+
+
+                
+                    <div class="footer-title">Like us on facebook</div>
+<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/yuasatrading" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=1586531728290446&amp;container_width=263&amp;href=https%3A%2F%2Fwww.facebook.com%2Fyuasatrading&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 75px; height: 20px;"><iframe name="f3bf743e1d626d" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Login_files/like(1).html" style="border: none; visibility: visible; width: 75px; height: 20px;" class=""></iframe></span></div>            </div>
+            <div class="col-sm-12 col-md-3">
+    <div class="footer-title">INFORMATION</div>
+    <ul class="footer-list">
+            <li><a href="https://yuasatrading.com/Topic/about-us">About Us</a></li>
+            <li><a href="https://yuasatrading.com/Topic/corporate-profile">Corporate Profile</a></li>
+            <li><a href="https://yuasatrading.com/Topic/terms-conditions">Terms &amp; Conditions</a></li>
+            <li><a href="https://yuasatrading.com/Topic/shipping-terms">Shipping Terms</a></li>
+            <li><a href="https://yuasatrading.com/Topic/used-car-buying-tips">Used Car Buying Tips</a></li>
+            <li><a href="https://yuasatrading.com/Topic/dealer-tricks">Dealer Tricks</a></li>
+            <li><a href="https://yuasatrading.com/Topic/privacy-policy">Privacy Policy</a></li>
+            <li><a href="https://yuasatrading.com/Topic/contact-us">Contact Us</a></li>
+    </ul>
+
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="footer-title">REGIONAL SHOWROOMS</div>
+                <ul class="footer-list">
+    <li><a href="https://yuasatrading.com/jp" data-countrycode="jp"><span class="flag flag-jp"></span> Japan</a></li>
+    <li><a href="https://yuasatrading.com/tz" data-countrycode="tz"><span class="flag flag-tz"></span> Tanzania</a></li>
+    <li><a href="https://yuasatrading.com/ke" data-countrycode="ke"><span class="flag flag-ke"></span> Kenya</a></li>
+    <li><a href="https://yuasatrading.com/ug" data-countrycode="ug"><span class="flag flag-ug"></span> Uganda</a></li>
+
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="footer-title">CAREERS</div>
+                <a href="https://yuasatrading.com/Careers"> <img src="./Login_files/Career-Banner.jpg" alt="Career"></a>
+
+                <div class="footer-title">PAYMENT METHODS</div>
+                <img src="./Login_files/payment-options.png" alt="payment options">
+             
+                
+                <div class="footer-title">STAY CONNECTED</div>
+                <ul class="socialSprite">
+                    <li><a href="http://www.facebook.com/yuasatrading" class="i-social-1" target="_blank" title="Facebook"></a></li>
+                    <li><a href="http://plus.google.com/" class="i-social-2" target="_blank" title="Google Plus"></a></li>
+                    <li><a href="http://www.linkedin.com/" class="i-social-3" target="_blank" title="Linked In"></a></li>
+                    <li><a href="http://www.twitter.com/yuasatrading" class="i-social-4" target="_blank" title="Twitter"></a></li>
+                    <li><a href="https://pinterest.com/yuasatrading" class="i-social-5" target="_blank" title="Pinterest"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="foot-stamp-wrapper hidden-print">
+    <div class="container">
+        <div class="row" style="margin-bottom:0">
+            <div class="col-sm-12">
+                <span class="glyphicon glyphicon-copyright-mark"></span> Copyrights 2018 <span class="client-name">Yuasa Trading</span>. All rights reserved.
+                <div style="height:5px"></div>
+                A website by <a href="http://www.webnomicstech.net/" target="_blank"><span class="wt-logo"></span> Webnomics Technologies.</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="compare-flyout" style="position:fixed;bottom:0px;right:10px;z-index:500" class="hidden-print">
+    <h2 id="toggle-comparelist" style="cursor:pointer;float:right;border-radius:5px 5px 0 0;"><span class="glyphicon glyphicon-stats"></span> Compare List (<span id="compare-list-count">0</span>/4) <span class="glyphicon glyphicon-chevron-up"></span></h2>
+    <div style="display:inline-block;margin-right:2px;float:right">
+        <script src="./Login_files/Support-Image-Button.js.aspx"></script><a href="javascript:void(0)" onclick="OpenLiveSupport()"><img title="support chat" src="./Login_files/141x44-offline.gif" border="0" style="height:39px;"></a>
+        
+    </div>
+    <div class="clearfix"></div>
+    <div id="comparelist-panel" style="background:#fff;display:none">
+        <div class="comparelist-wrapper" style="width:555px;background:url(/content/images/comparelist-bg.gif) no-repeat 128px center;border-top:1px solid #ddd;border-collapsed:collapsed">
+            <table class="table-striped table-condensed table-bordered table-text-sm" style="margin-bottom:0px;background:#fff">
+                <tbody><tr>
+                    <td style="width:126px;height:86px"><strong>Make / Model</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>SKU</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Model Code / Year</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Color / Transmission</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Mileage</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Engine / Fuel</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Seats</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Location</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Extras</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Price</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Get Quote</strong></td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div style="padding:5px;overflow:auto">
+            <button class="btn btn-default btn-xs pull-left" id="clearCompareList-btn"><span class="glyphicon glyphicon-remove"></span> Remove All</button>
+            <span class="pull-right">
+                    <button class="btn btn-default btn-xs" onclick="window.location=&#39;/Account/Login&#39;"><span class="glyphicon glyphicon-log-in"></span> Login to Get Quotes</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="quoteRequestSent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Quote Request Sent</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success"><span class="glyphicon glyphicon-ok-sign"></span> Your request for quoatation of these vehicles has been submitted. You will be informed shortly via email. Thank you!<br><br>You can check your quotes status in <a href="https://yuasatrading.com/Account/Index/Myquotes" class="alert-link">My Quotes</a> section.</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<script>
+    $('#toggle-comparelist').click(function () {
+        if ($('#comparelist-panel').css('display') == 'none') {
+            showCompareFlyout();
+        }
+        else {
+            hideCompareFlyout()
+        }
+    });
+
+    var compareList = new Array();
+
+
+    $('.compare-add-item').click(function () {
+        if (compareList.length == 4) {
+            alert('Maximum 4 vehicles can be compared.');
+            return false;
+        }
+
+        var i = $(this).data("sku");
+        if ($.inArray(i, compareList) != -1) {
+            alert('This vehicle is already in compare list.');
+            return false;
+        }
+
+        $.post('/Compare/AddAjax/' + i, function (res) {
+            populateCompareFlyout(res);
+            compareList.push(i);
+        });
+
+        showCompareFlyout();
+        $('#compare-list-count').text(parseInt($('#compare-list-count').text()) + 1);
+    });
+
+    $('.comparelist-checkbox').live('click', function(){
+        if($(this).is(':checked'))
+        {
+            compareList.push($(this).data("sku"));
+        }
+        else
+        {
+            compareList.splice($.inArray($(this).data("sku"), compareList), 1);
+        }
+    });
+
+    $('#getQuotes-btn').click(function () {
+
+        if ($('#comparelist-panel #CountryId').val() == "") {
+            $('#comparelist-panel #CountryId').focus();
+            return false;
+        }
+      
+        if(compareList.length <= 1)
+        {
+            alert('Please select more than one checkbox to request for a quotation.');
+            return false;
+        }
+
+        $.post('/Catalog/SubmitQuotes/?VehicleIds=' + compareList.join(",") + '&CountryId=' + $('#CountryId').val(), function () {
+            hideCompareFlyout();
+            $('#quoteRequestSent').modal('show');
+        });
+    });
+
+    $('.compare-remove-item').live('click', function () {
+        var i = $(this).data("sku");
+        $.post('/Compare/RemoveAjax/' + i, function () {
+            compareList.splice($.inArray(i, compareList), 1);
+            $('#comparelist-panel td[data-sku="' + i + '"]').remove();
+            $('#compare-list-count').text(compareList.length);
+
+            if(compareList.length == 0) hideCompareFlyout();
+        });
+    });
+
+    $('#clearCompareList-btn').on('click', function () {
+        $.post('/Compare/EmptyAjax', function () {
+            $('#comparelist-panel tr').each(function () {
+                $(this).find('td:gt(0)').fadeOut(function () { $(this).remove(); });
+            });
+            $('#compare-list-count').text('0');
+            hideCompareFlyout();
+            compareList.length = 0;
+        });
+    });
+
+    function showCompareFlyout() {
+        if ($('#compare-flyout').css('display') == 'none') {
+            $('#compare-flyout').show();
+        }
+        $('#comparelist-panel').animate({ height: 'show' }, 300, function () { $('#toggle-comparelist .glyphicon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down'); });
+    }
+
+    function hideCompareFlyout() {
+        $('#comparelist-panel').animate({ height: 'hide' }, 300, function () { $('#toggle-comparelist .glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up'); });
+    }
+
+    function populateCompareFlyout(p) {
+        var tmpTd = '<td data-sku="' + p.Sku + '" style="width:117px;vertical-align:top !important">';
+        tmpTd += '<a href="/Catalog/Details/ytc-' + p.VehicleSku + '">';
+        tmpTd += '<div class="relative">';
+        tmpTd += '<img class="img-thumbnail" width="96" height="60" src="/Img/Get/' + p.VehicleSku + '.jpg?w=96&h=60&sku=' + p.VehicleSku + '&isReserved=' + p.IsReserved + '&isSold=' + p.IsSold + '" title="' + p.Manufacturer + " " + p.Model + '" alt="' + p.Manufacturer + " " + p.Model + '">';
+        tmpTd += '</a>';
+        tmpTd += '<span class="btn btn-danger btn-xs compare-remove-item" title="Remove" data-sku="' + p.Sku + '"><span class="glyphicon glyphicon-remove"></span></span>';
+        tmpTd += '</div>';
+        tmpTd += '<div><a href="/Catalog/Details/ytc-' + p.VehicleSku + '">' + p.Manufacturer + ' / ' + p.Model + '</a></div>';
+        tmpTd += '</td>';
+        $('#comparelist-panel tr:eq(0)').append(tmpTd).fadeIn();
+
+        $('#comparelist-panel tr:eq(1)').append('<td data-sku="' + p.Sku + '">' + p.VehicleSku + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(2)').append('<td data-sku="' + p.Sku + '">' + p.ModelCode + ' | ' + p.Year + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(3)').append('<td data-sku="' + p.Sku + '">' + p.Color + ' | ' + p.Transmission + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(4)').append('<td data-sku="' + p.Sku + '">' + numberWithCommas(p.Mileage) + ' Km </td>').fadeIn();
+        $('#comparelist-panel tr:eq(5)').append('<td data-sku="' + p.Sku + '">' + p.EnginSize + ' Lt | ' + p.FuelType + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(6)').append('<td data-sku="' + p.Sku + '">' + p.Seats + '</td>').fadeIn();
+        $('#comparelist-panel tr:eq(7)').append('<td data-sku="' + p.Sku + '">' + p.ShowRoom + '</td>').fadeIn();
+
+        tmpTd = '<td data-sku="' + p.Sku + '">';
+        tmpTd += p.Extras;
+
+        if (p.IsLowMileage) {
+            tmpTd += '<br />';
+            tmpTd += '<span style="font-weight:bold;color:Red">Low Mileage</span>';
+        }
+        tmpTd += '</td>';
+        $('#comparelist-panel tr:eq(8)').append(tmpTd).fadeIn();
+
+        tmpTd = '<td data-sku="' + p.Sku + '">';
+        if(p.ShowPrice)
+        {
+            tmpTd += '<strong>' + p.PriceType + ': </strong>';
+            if(parseInt(p.OldPrice) > 0)
+            {
+                tmpTd += '<span class="text-st text-muted">' + numberWithCommas(p.OldPrice) + '</span><br />';
+            }
+            tmpTd += '<strong>US $ ' + numberWithCommas(p.Price) + '</strong>';
+        }
+        tmpTd += '</td>';
+        $('#comparelist-panel tr:eq(9)').append(tmpTd).fadeIn();
+
+        $('#comparelist-panel tr:eq(10)').append('<td data-sku="' + p.Sku + '" class="text-center"><input type="checkbox" data-sku="' + p.Sku + '" class="comparelist-checkbox" checked="checked" /></td>').fadeIn();
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+</script>
+
+    
+
+    
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48296649-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body></html>

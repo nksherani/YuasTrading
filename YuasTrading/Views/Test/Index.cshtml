@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/yuas/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function () {
+            console.log(JSON.stringify('@ViewBag', null, 4));
+        })
+
+    </script>
+</head>
+<body>
+    <div> 
+        @if (ViewBag.name != null)
+        {
+            <div>@ViewBag.name</div>
+        }
+    </div>
+</body>
+</html>

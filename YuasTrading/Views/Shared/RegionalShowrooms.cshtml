@@ -1,0 +1,66 @@
+﻿<div class="heading-bar">
+    <span class="title">REGIONAL SHOWROOMS</span>
+
+</div>
+
+<div class="block">
+    <div class="flags-slider">
+        <div class="flag-item">
+            <a href="/jp">
+                <span class="flag-lg flag-jp"></span>
+                <div>Japan</div>
+            </a>
+        </div>
+        <div class="flag-item">
+            <a href="/tz">
+                <span class="flag-lg flag-tz"></span>
+                <div>Tanzania</div>
+            </a>
+        </div>
+        <div class="flag-item">
+            <a href="/ke">
+                <span class="flag-lg flag-ke"></span>
+                <div>Kenya</div>
+            </a>
+        </div>
+        <div class="flag-item">
+            <a href="/ug">
+                <span class="flag-lg flag-ug"></span>
+                <div>Uganda</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.flags-slider').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            }]
+    });
+</script>

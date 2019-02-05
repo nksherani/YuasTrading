@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Yuasa Trading Co, Japan (Used Cars Exporter, Japanese Used Car Dealer)</title>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" href="~/favicon.png" />
+    <script>
+        if (window.self != window.top) parent.window.location = window.location.pathname;
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    @*@Scripts.Render("~/yuas/js")
+        @Styles.Render("~/yuas/css")*@
+    <link href="~/Content/yuas/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/yuas/styles.css" rel="stylesheet" />
+    <script src="~/Scripts/yuas/jquery-1.8.3.min.js"></script>
+    <link href="~/Content/yuas/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" />
+    <script src="~/Scripts/yuas/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script src="~/Scripts/yuas/jquery.validate.min.js"></script>
+    <script src="~/Scripts/yuas/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/yuas/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/yuas/bootstrap.min.js"></script>
+    <link href="~/Content/yuas/flags.css" rel="stylesheet" />
+    <link href="~/Content/yuas/slick.css" rel="stylesheet" />
+    <script src="~/Scripts/yuas/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/Scripts/yuas/slick.min.js"></script>
+    <script src="~/Scripts/yuas/responsiveCarousel.min.js"></script>
+    <script src="~/Scripts/yuas/jcarousellite_1.0.1.pack.js"></script>
+    <script src="~/Scripts/yuas/jquery.mousewheel.js"></script>
+    <script src="~/Scripts/yuas/ilightbox.js"></script>
+
+    <style type="text/css">
+        @@media screen and (max-width: 991px) {
+            .selection-wrapper {
+                display: block;
+                border-radius: 6px;
+                float: none;
+            }
+
+            .low-mileage {
+                margin-top: 15px;
+            }
+        }
+    </style>
+    <script>
+        var captchaIsValid = false;
+
+        $(document).ready(function () {
+            $('.top-menu a[href="' + window.location.pathname + '"]').addClass("active");
+
+            $('form[data-captcha="true"]').on('submit', function (e) {
+                var elm = $(this);
+                if (captchaIsValid == false && elm.valid()) {
+                    e.preventDefault();
+                    elm.find('.captcha-validator').hide();
+                    if (Recaptcha.get_response().length > 0) {
+                        $.post('/Recaptcha/Validate', { challenge: Recaptcha.get_challenge(), response: Recaptcha.get_response() }, function (data) {
+                            if (data) {
+                                captchaIsValid = true;
+                                elm.submit();
+                            }
+                            else {
+                                Recaptcha.reload();
+                                elm.find('.captcha-validator').show();
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        $.fn.resetForm = function () {
+            this.find('select').each(function () { $(this).prop('selectedIndex', 0);; });
+            this.find('input[type=text], input[type=password], input[type=hidden], textarea').each(function () { $(this).val(''); });
+            this.find('input:checked').each(function () { $(this).removeAttr('checked'); });
+        };
+    </script>
+
+
+    <meta name="keywords" content="Japanese used cars, used cars and trucks, cars for sale in Tanzania, Car Dealers in Tanzania, Japanese used cars in Uganda, used toyota car in Tanzania, Yuasa Autos, used car dealers, Yuasa cars," />
+    <meta name="author" content="Administrator" />
+    <meta name="title" content="Japanese Used Cars | YUASA TRADING" />
+    <meta name="description" content="YUASA TRADING leading car exporter of preowned cars directly from Japan, To Tanzania (Yuasa Auto Impex), Kenya (Yuasa Motors), Uganda (Yuasa Investments)" />
+    <meta name="generator" content="YUASA TRADING" />
+    <meta name="Search.Engines" content="Google, google, Yahoo, Bing, Altavista, AoLNet, Infoseek, Excite, Hotbot, Lycos, Magellan, LookSmart, CNet" />
+    <meta name="email" content="email@domain.com" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Rating" content="General" />
+    <meta name="robots" content="index,follow" />
+    <meta name="GOOGLEBOT" content="INDEX, FoLLoW" />
+    <meta name="Revisit-after" content="2 Days" />
+    <meta name="language" content="English" />
+    <meta name="channel" content="channeltype" />
+    <meta name="google-site-verification" content="WoOtdgpe8D6-Ia4fLzOqwKsbzdXDpWVyk9bVUaB4a6w" />
+    <meta name="msvalidate.01" content="2F746455DCD3DBA71FB9CB77C4010B22" />
+    <link rel="alternate" href="https://yuasatrading.com" lang="en-tz" />
+    <meta name="DC.title" content="Yuasa Trading" />
+    <meta name="geo.region" content="TZ-02" />
+    <meta name="geo.placename" content="Dar es Salaam" />
+    <meta name="geo.position" content="-6.78463;39.27612" />
+    <meta name="ICBM" content="-6.78463, 39.27612" />
+    <meta name="p:domain_verify" content="17af7547a4b2e098efc7f47940fb6f51" />
+
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1586531728290446";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="header-wrapper hidden-print">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 col-md-4">
+                    <div class="row" style="max-height:69px;overflow:hidden">
+                        <div class="col-sm-12 col-lg-11 col-md-11" style="padding-top:20px;">
+
+                            <a href="/">
+                                <img src="/content/images/logo.png" alt="Yuasa Trading" style="margin-top:5px;max-width:318px;width:100%" />
+                            </a>
+                        </div>
+                        <div class="col-md-offset-1 col-lg-offset-1 text-right">
+
+                        </div>
+                    </div>
+                    @*<script src="https://yuasatrading.com/LiveChat/CuteSoft_Client/CuteChat/Support-Visitor-monitor.js.aspx"></script>*@
+                </div>
+                <div class="col-md-3 col-lg-3" style="text-align:center;">
+                    <div style="color: #999; font-size: 20px;">Current Stock: </div>
+                </div>
+                <div class="col-md-5 col-lg-5 ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="selection-wrapper">
+                                <div class="dropdown" id="langDDL" style="color:white !important ">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="javascript:void(0)"><img src="/content/images/language.png" alt="language" style="width:16px;height:16px;vertical-align:middle" /> English <span class="caret caret-white"></span></a>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="/Home/Lang/en?ReturnUrl=%2F">English</a></li>
+                                        <li><a href="/Home/Lang/fr?ReturnUrl=%2F">French</a></li>
+                                        <li><a href="/Home/Lang/ja?ReturnUrl=%2F">Japanese</a></li>
+                                        <li><a href="/Home/Lang/pt?ReturnUrl=%2F">Portuguese</a></li>
+                                        <li><a href="/Home/Lang/ru?ReturnUrl=%2F">Russian</a></li>
+
+
+                                    </ul>
+                                    <script>
+                                        function getCookie(cname) {
+                                            var name = cname + "=";
+                                            var ca = document.cookie.split(';');
+                                            for (var i = 0; i < ca.length; i++) {
+                                                var c = ca[i];
+                                                while (c.charAt(0) == ' ') c = c.substring(1);
+                                                if (c.indexOf(name) != -1) {
+                                                    return c.substring(name.length, c.length);
+                                                }
+                                            }
+                                            return "";
+                                        }
+                                        if (getCookie("AppLang") != null) {
+                                            var appLang = getCookie("AppLang");
+                                            if (appLang != "en") {
+                                                LangCaption = "";
+                                                switch (appLang) {
+                                                    case "fr":
+                                                        LangCaption = 'French';
+                                                        break;
+                                                    case "ja":
+                                                        LangCaption = 'Japanese';
+                                                        break;
+                                                    case "ur":
+                                                        LangCaption = 'Urdu';
+                                                        break;
+                                                    case "pt":
+                                                        LangCaption = 'Portuguese';
+                                                        break;
+                                                    case "ru":
+                                                        LangCaption = 'Russian';
+                                                        break;
+                                                    default:
+                                                        LangCaption = 'English';
+                                                }
+                                                $('#langDDL > a').html('<img src="/content/images/language.png" alt="language image" style="width:16px;height:16px;vertical-align:middle" /> ' + LangCaption + ' <span class="caret caret-white"></span>');
+                                            }
+                                        }
+                                    </script>
+
+                                </div>
+
+                                <div class="dropdown">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="#"><img src="/content/images/skype.png" alt="skype" style="width:16px;height:16px;vertical-align:middle" /> Skype Call <span class="caret caret-white"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="skype:Yuasa_sales.Tz?call" title="offline">
+                                                <span class="skype-i i-offline"></span>
+
+                                                <strong>Tanzania Sales</strong>
+                                                <span class="text-muted text-sm"> &bull; <em>English, Swahili </em></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="skype:Yuasa_sales.Ke?call" title="offline">
+                                                <span class="skype-i i-offline"></span>
+
+                                                <strong>Kenya Sales</strong>
+                                                <span class="text-muted text-sm"> &bull; <em>English, Swahili</em></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown" id="showroomsDDL">
+                                    <a data-toggle="dropdown" class="anchor-wrapper" href="#"></a>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="/"><span class="glyphicon glyphicon-globe"></span> Global</a></li>
+                                        <li><a href="/jp" data-countryCode="jp"><span class="flag flag-jp"></span> Japan</a></li>
+                                        <li><a href="/tz" data-countryCode="tz"><span class="flag flag-tz"></span> Tanzania</a></li>
+                                        <li><a href="/ke" data-countryCode="ke"><span class="flag flag-ke"></span> Kenya</a></li>
+                                        <li><a href="/ug" data-countryCode="ug"><span class="flag flag-ug"></span> Uganda</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <script>
+                                $('#showroomsDDL > a').html('<span class="glyphicon glyphicon-globe"></span> Global' + ' <span class="caret caret-white"></span>');
+                            </script>
+                        </div>
+                    </div>
+                    @Html.Partial("HeaderLogin")
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div itemscope itemtype="http://schema.org/Organization" style="display:none">
+        <a itemprop="url" href="https://yuasatrading.com">
+            <div itemprop="name"><strong>Yuasa Trading Co,</strong></div>
+        </a>
+        <div itemprop="description">YUASA TRADING leading car exporter of preowned cars directly from Japan, To Tanzania (Yuasa Auto Impex), Kenya (Yuasa Motors), Uganda (Yuasa Investments)</div>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">New Bagamoyo Rd, Opp Gapco Victoria Fuel Stand,</span><br>
+            P.O. Box: <span itemprop="postOfficeBoxNumber">P.O. Box 3091</span><br>
+            <span itemprop="addressLocality">Dar-es-salaam</span><br>
+            <span itemprop="addressRegion">Dar es Salaam</span><br>
+            <span itemprop="addressCountry">Tanzania</span><br>
+        </div>
+    </div>
+
+    <div class="menu-wrapper hidden-print">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav top-menu">
+                    <li><a href='/'>HOME</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="anchor-wrapper" href="#">ADVANCE ORDERS <span class="caret caret-white"></span></a>
+                        <ul class="dropdown-menu" id="advanceOrderDDL" role="menu" style="background-color: white; margin-top: -1px; width: 100%;">
+                            <li><a href="/Catalog/AdvanceOrder">Place Advance Order</a></li>
+                            <li><a href="/Catalog/TrackOrder">Track Order</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Catalog/Search'>SEARCH</a></li>
+                    <li><a href='/Blog'>BLOG</a></li>
+
+                    <li><a href='/Inquiry'>INQUIRY</a></li>
+                    <li><a href='/Promotions'>PROMOTIONS</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm hidden-md" style="padding-left:16px;">
+                    <li><span class="yticon yticon-email"></span> Email: info@yuasatrading.com</li>
+                    <li><span class="yticon yticon-phone"></span> Phone: (+81) 480-726955</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            @RenderSection("slider", false)
+            @*@RenderSection("search", false)*@
+            <div class="col-sm-12 col-md-3">
+                @Html.Partial("_Search")
+                </div>
+        </div>
+        </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-3 hidden-print">
+
+
+                @Html.Partial("LikeUsOnFB")
+
+                @Html.Partial("SpecialOffers")
+
+                @Html.Partial("SearchByType")
+
+                @Html.Partial("RecentPosts")
+
+               
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+
+
+
+                @Html.Partial("RegionalShowrooms")
+               
+                @RenderBody()
+                <script>
+                    $('.add-to-wishlist').click(function () {
+                        var $elm = $(this);
+                        $.post("/Account/AddToWishlist/" + $(this).data("sku"), function (d) {
+
+                            if (d == true) {
+                                alert("Wish List Updated Successfully")
+                                $elm.unbind('click').attr('disabled', 'disabled');
+                            }
+                            else
+                                if (d == false) {
+                                    alert("Vehicle already in your wish list")
+                                    $elm.unbind('click').attr('disabled', 'disabled');
+                                }
+
+                        });
+                    });
+                </script>
+
+
+                <div class="row" style="margin-bottom:0">
+                    <div class="col-sm-12 clearfix">
+                        @Html.Partial("BrowseByBrand")
+                    </div>
+                </div>
+                @Html.Partial("LowBudgetLowMileage")
+
+
+                @Html.Partial("SubscribeForNewsletters")
+            </div>
+        </div>
+    </div>
+    @Html.Partial("Footer")
+
+    @Html.Partial("LiveChat")
+
+    <script>
+        $('#toggle-comparelist').click(function () {
+            if ($('#comparelist-panel').css('display') == 'none') {
+                showCompareFlyout();
+            }
+            else {
+                hideCompareFlyout()
+            }
+        });
+
+        var compareList = new Array();
+
+
+        $('.compare-add-item').click(function () {
+            if (compareList.length == 4) {
+                alert('Maximum 4 vehicles can be compared.');
+                return false;
+            }
+
+            var i = $(this).data("sku");
+            if ($.inArray(i, compareList) != -1) {
+                alert('This vehicle is already in compare list.');
+                return false;
+            }
+
+            $.post('/Compare/AddAjax/' + i, function (res) {
+                populateCompareFlyout(res);
+                compareList.push(i);
+            });
+
+            showCompareFlyout();
+            $('#compare-list-count').text(parseInt($('#compare-list-count').text()) + 1);
+        });
+
+        $('.comparelist-checkbox').live('click', function () {
+            if ($(this).is(':checked')) {
+                compareList.push($(this).data("sku"));
+            }
+            else {
+                compareList.splice($.inArray($(this).data("sku"), compareList), 1);
+            }
+        });
+
+        $('#getQuotes-btn').click(function () {
+
+            if ($('#comparelist-panel #CountryId').val() == "") {
+                $('#comparelist-panel #CountryId').focus();
+                return false;
+            }
+
+            if (compareList.length <= 1) {
+                alert('Please select more than one checkbox to request for a quotation.');
+                return false;
+            }
+
+            $.post('/Catalog/SubmitQuotes/?VehicleIds=' + compareList.join(",") + '&CountryId=' + $('#CountryId').val(), function () {
+                hideCompareFlyout();
+                $('#quoteRequestSent').modal('show');
+            });
+        });
+
+        $('.compare-remove-item').live('click', function () {
+            var i = $(this).data("sku");
+            $.post('/Compare/RemoveAjax/' + i, function () {
+                compareList.splice($.inArray(i, compareList), 1);
+                $('#comparelist-panel td[data-sku="' + i + '"]').remove();
+                $('#compare-list-count').text(compareList.length);
+
+                if (compareList.length == 0) hideCompareFlyout();
+            });
+        });
+
+        $('#clearCompareList-btn').on('click', function () {
+            $.post('/Compare/EmptyAjax', function () {
+                $('#comparelist-panel tr').each(function () {
+                    $(this).find('td:gt(0)').fadeOut(function () { $(this).remove(); });
+                });
+                $('#compare-list-count').text('0');
+                hideCompareFlyout();
+                compareList.length = 0;
+            });
+        });
+
+        function showCompareFlyout() {
+            if ($('#compare-flyout').css('display') == 'none') {
+                $('#compare-flyout').show();
+            }
+            $('#comparelist-panel').animate({ height: 'show' }, 300, function () { $('#toggle-comparelist .glyphicon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down'); });
+        }
+
+        function hideCompareFlyout() {
+            $('#comparelist-panel').animate({ height: 'hide' }, 300, function () { $('#toggle-comparelist .glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up'); });
+        }
+
+        function populateCompareFlyout(p) {
+            var tmpTd = '<td data-sku="' + p.Sku + '" style="width:117px;vertical-align:top !important">';
+            tmpTd += '<a href="/Catalog/Details/ytc-' + p.VehicleSku + '">';
+            tmpTd += '<div class="relative">';
+            tmpTd += '<img class="img-thumbnail" width="96" height="60" src="/Img/Get/' + p.VehicleSku + '.jpg?w=96&h=60&sku=' + p.VehicleSku + '&isReserved=' + p.IsReserved + '&isSold=' + p.IsSold + '" title="' + p.Manufacturer + " " + p.Model + '" alt="' + p.Manufacturer + " " + p.Model + '">';
+            tmpTd += '</a>';
+            tmpTd += '<span class="btn btn-danger btn-xs compare-remove-item" title="Remove" data-sku="' + p.Sku + '"><span class="glyphicon glyphicon-remove"></span></span>';
+            tmpTd += '</div>';
+            tmpTd += '<div><a href="/Catalog/Details/ytc-' + p.VehicleSku + '">' + p.Manufacturer + ' / ' + p.Model + '</a></div>';
+            tmpTd += '</td>';
+            $('#comparelist-panel tr:eq(0)').append(tmpTd).fadeIn();
+
+            $('#comparelist-panel tr:eq(1)').append('<td data-sku="' + p.Sku + '">' + p.VehicleSku + '</td>').fadeIn();
+            $('#comparelist-panel tr:eq(2)').append('<td data-sku="' + p.Sku + '">' + p.ModelCode + ' | ' + p.Year + '</td>').fadeIn();
+            $('#comparelist-panel tr:eq(3)').append('<td data-sku="' + p.Sku + '">' + p.Color + ' | ' + p.Transmission + '</td>').fadeIn();
+            $('#comparelist-panel tr:eq(4)').append('<td data-sku="' + p.Sku + '">' + numberWithCommas(p.Mileage) + ' Km </td>').fadeIn();
+            $('#comparelist-panel tr:eq(5)').append('<td data-sku="' + p.Sku + '">' + p.EnginSize + ' Lt | ' + p.FuelType + '</td>').fadeIn();
+            $('#comparelist-panel tr:eq(6)').append('<td data-sku="' + p.Sku + '">' + p.Seats + '</td>').fadeIn();
+            $('#comparelist-panel tr:eq(7)').append('<td data-sku="' + p.Sku + '">' + p.ShowRoom + '</td>').fadeIn();
+
+            tmpTd = '<td data-sku="' + p.Sku + '">';
+            tmpTd += p.Extras;
+
+            if (p.IsLowMileage) {
+                tmpTd += '<br />';
+                tmpTd += '<span style="font-weight:bold;color:Red">Low Mileage</span>';
+            }
+            tmpTd += '</td>';
+            $('#comparelist-panel tr:eq(8)').append(tmpTd).fadeIn();
+
+            tmpTd = '<td data-sku="' + p.Sku + '">';
+            if (p.ShowPrice) {
+                tmpTd += '<strong>' + p.PriceType + ': </strong>';
+                if (parseInt(p.OldPrice) > 0) {
+                    tmpTd += '<span class="text-st text-muted">' + numberWithCommas(p.OldPrice) + '</span><br />';
+                }
+                tmpTd += '<strong>US $ ' + numberWithCommas(p.Price) + '</strong>';
+            }
+            tmpTd += '</td>';
+            $('#comparelist-panel tr:eq(9)').append(tmpTd).fadeIn();
+
+            $('#comparelist-panel tr:eq(10)').append('<td data-sku="' + p.Sku + '" class="text-center"><input type="checkbox" data-sku="' + p.Sku + '" class="comparelist-checkbox" checked="checked" /></td>').fadeIn();
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48296649-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

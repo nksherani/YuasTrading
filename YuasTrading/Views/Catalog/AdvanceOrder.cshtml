@@ -1,0 +1,81 @@
+﻿@model YuasTrading.Models.AdvanceOrderModel
+@{
+    ViewBag.Title = "AdvanceOrder";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+@{
+    if (!User.Identity.IsAuthenticated)
+
+    {
+        <h2>Log in</h2>
+        <div class="block block-content">
+            <div style="display:table;width:100%">
+                <div style="width:50%;display:table-cell;padding:10px">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class='alert alert-warning'><span class='glyphicon glyphicon-exclamation-sign'></span> Please login or register before placing an advance order.</div>
+                        <table style="margin:0 auto">
+                            <tr>
+                                <td><label class="control-label" for="Email">Email</label></td>
+                                <td>@Html.TextBox("Email", "", new { @type = "email", placeholder = "enter your email" })</td>
+                            </tr>
+                            <tr>
+                                <td><label class="control-label" for="Password">Password</label></td>
+                                <td>@Html.Password("Password")</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>@Html.CheckBox("Remember me") @Html.Label("Remember me")</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td style="text-align:center">
+                                    <input type="submit" class="form-button" value="Sign in" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:center">
+                                    <div style="margin:20px auto;position:relative;width:100%">
+                                        <div style="height:11px;border-bottom:1px solid #dfdfdf"></div>
+                                        <span style="top:0;left:45%;position:absolute;background:#fff;padding:0 11px;">OR</span>
+                                    </div>
+
+                                    <a href="/Account/FacebookLogin" title="Login with Facebook">
+                                        <img src="/Content/Images/facebook-login.png" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    }
+
+                </div>
+
+                <div style="width:50%;display:table-cell;padding:10px;border-left:1px solid #dfdfdf;line-height:20px">
+                    <ul>
+                        <li>I need to setup a <a href="/Account/Register">new account</a>.</li>
+                        <li>Help me <a href=/Account/Recovery>retrieve my password</a>.</li>
+                    </ul>
+                    <strong>Profile</strong><br />
+                    Create a profile to use for all upcoming purchases. It&#39;s a safe, easy way to store payment information and product preferences. Login now to set up your profile!
+                </div>
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <h2>Advance Order</h2>
+        using (Html.BeginForm("AdvanceOrder", "Catalog", FormMethod.Post, new { id = "advanceOrderFrm" }))
+        {
+            <div>@Html.LabelFor(x => x.Manufacturer)</div>
+            <div>@Html.TextBoxFor(x => x.Manufacturer)</div>
+            <input type="submit" class="form-button" value="Add To Wishlist" />
+        }
+    }
+}
+

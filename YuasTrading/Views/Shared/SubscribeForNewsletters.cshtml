@@ -1,0 +1,22 @@
+﻿<div class="heading-bar hidden-print">
+    <span class="title">Subscribe for Newsletters</span>
+</div>
+
+<div class="block block-pad hidden-print">
+    <div class="alert alert-success" id="NewsletterSubscribedSuccess" style="display:none;margin-bottom:0"><span class="glyphicon glyphicon-ok-sign"></span> You&#39;ve subscribed for newsletters. Thank you!</div>
+    <form action="/Newsletters/Subscribe?Length=11" data-ajax="true" data-ajax-begin="$(&#39;#NewsletterSubscriptionForm .form-button&#39;).addClass(&#39;form-button-disabled&#39;).unbind(&#39;on&#39;);" data-ajax-complete="$(&#39;#NewsletterSubscriptionForm&#39;).fadeOut(function () { $(this).resetForm(); $(&#39;#NewsletterSubscribedSuccess&#39;).fadeIn() });" data-ajax-loading="#NewslettersFormLoader" id="NewsletterSubscriptionForm" method="post">
+        <div class="row" style="margin-bottom:0">
+            <div class="col-sm-3 text-right">
+                <span class="text-muted" style="display:block;margin-top:7px">Enter your email</span>
+            </div>
+            <div class="col-sm-5">
+                @*<input class="form-control" data-val="true" data-val-regex="Incorrect email address." data-val-regex-pattern="^[a-zA-Z0-9_\.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$" data-val-remote="&#39;Email&#39; is invalid." data-val-remote-additionalfields="*.Email" data-val-remote-type="POST" data-val-remote-url="/Newsletters/CheckSubscriberExist" data-val-required="required" id="Email" name="Email" placeholder="@email" type="text" value="" />*@
+                <span class="field-validation-valid validator" data-valmsg-for="Email" data-valmsg-replace="true" style="display:block"></span>
+            </div>
+            <div class="col-sm-4">
+                <input type="submit" class="form-button" value="Subscribe" />
+                <span id="NewslettersFormLoader" class="text-muted" style="display:none"><em>Wait...</em></span>
+            </div>
+        </div>
+    </form>
+</div>
